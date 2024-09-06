@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>dl 용어 정의 목록</title>
+</head>
+<body>
+  <p>
+    용어정의,저자 등  dl<br>
+    dl은 자식 dt dd
+  </p>
+  <!-- dl>dt+dd -->
+  <dl>
+    <dt>작곡가</dt>
+    <dd>홍길동</dd>
+    <dd>최은정</dd>
+    <dd>유명한작곡가</dd>
+  </dl>
+  <!-- dl>dt*2+dd*2 -->
+  <!-- 
+   emmet 기호
+   > 부모>자식
+   +(형제) 형+동생
+   * 반복
+  -->
+   <!-- 
+  dl 여러개의 dt 자식으로 가질 수 있다
+  dt는 dd를 여러개의 동생으로 가질 수 있다
+   -->
+   <!-- dl>dt*2+dd*2 -->
+  <!-- dt을2번 반복 그리고 형제로 dd를 두번반복 -->
+   <dl>
+    <dt></dt>
+    <dt></dt>
+    <dd></dd>
+    <dd></dd>
+   </dl>
+   <!-- dl>(dt+dd*2)*2 -->
+   <!-- 
+    dl과(dt+dd*2)를 부모자식
+    (dt+dd*2)를 두번 반복
+   -->
+   <dl>
+    <dt>작곡가</dt>
+    <dd>홍길동</dd>
+    <dd>최은정</dd>
+    <dt>작사가</dt>
+    <dd>이미나</dd>
+    <dd>유명한</dd>
+   </dl>
+</body>
+</html>
