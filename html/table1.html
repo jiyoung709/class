@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>table </title>
+</head>
+<body>
+  <!-- 
+  tr   table row  한줄
+  td  table data   칸
+  
+  -->
+  <table border="1" borderspacing="0">
+   <!-- tr>td*4 -->
+   <tr>
+    <td>1-1</td>
+    <td>1-2</td>
+    <td>1-3</td>
+    <td>1-4</td>
+   </tr>
+   <tr>
+    <td>2-1</td>
+    <td>2-2</td>
+    <td>2-3</td>
+    <td>2-4</td>
+   </tr>
+  </table>
+
+  <!-- 
+   3줄 2칸 표
+   1줄 열의 제목
+   
+  -->
+   <!-- 테이블 선언 -->
+   <table border="1">
+    <tr>
+       <th>JS</th>
+       <th>디자인</th>
+    </tr>
+        <td>서울</td>
+        <td>부산</td>
+    </tr>
+    <tr>
+       <td>인천</td>
+       <td>양양</td>
+    </tr>
+   </table>
+   
+   <hr>
+<!-- 3*5칸 -->
+ <!-- table>tr*3>td*5 -->
+ <table border="1">
+  <!-- 1tr -->
+
+  <thead>
+    <tr>
+      <th></th>
+      <th colspan="2">1영업</th>
+      <!-- <th></th> -->
+      <th colspan="2">2영업</th>
+      <!-- <th></th> -->
+    </tr>
+  </thead>
+  <!-- 2 tr -->
+  <tbody>
+    <tr>
+      <th>지역</th>
+      <td>서울</td>
+      <td>부산</td>
+      <td>강화</td>
+      <td>양양</td>
+    </tr>
+    <!-- 3tr -->
+    <tr>
+      <th>판매액</th>
+      <td>1,000</td>
+      <td>900</td>
+      <td>1,000</td>
+      <td>800</td>
+    </tr>
+  </tbody>
+ </table>
+</body>
+</html>
