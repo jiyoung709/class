@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>상품목록연습 - thumbnail</title>
+  </head>
+  <body>
+    <!-- 
+    emmet
+    >  부모>자식
+    +  형제+형제
+    *   반복   div*3  
+        span.item*2   ← span.item+span.item
+        span.item1*2   ← span.item1+span.item1
+    $  반복되는 요소에서 숫자를 변경 span.item$*2   ← span.item1+span.item2
+    .   클래스명   태그.클래스명span.title  .클래스명  .title
+    #  아이디  태그#아이디 header#header    태그#아이디.클래스
+    -->
+    <div class="prdList__item">
+      <div class="thumbnail">
+        <a href=""
+          ><img
+            src="imgae-multimedia/image/12c96f2fdea79dc1ded7cc3a7d82d2cc.png"
+            alt=""
+        /></a>
+        <div class="likeButton">
+          <!-- button>img.likePrdIcon+strong>span.likeProCont -->
+          <button>
+            <img src="" alt="" class="likePrdIcon" />
+            <strong>
+              <span class="likeProCont"></span>
+            </strong>
+          </button>
+        </div>
+        <!-- <div class="b">thumbnail 자식</div> -->
+      </div>
+      <!-- <div class="a">thumbnail 형제</div> -->
+      <!-- .thumbnail -->
+    </div>
+  </body>
+</html>
