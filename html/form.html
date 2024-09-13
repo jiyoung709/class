@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>form</title>
+</head>
+<body>
+  <form action="">
+    <fieldset>
+      <legend>필드셋의 제목</legend>
+      <p>
+        <label for="usr_name">이름</label>
+        <input type="text" id="usr_name" >
+      </p>
+      <p>
+        <label>
+          비밀번호 <input type="password">
+        </label>
+      </p>
+      <p>
+        <label for="">전화번호</label>
+        <input type="tel" name="" id="">
+      </p>
+    </fieldset>
+    <fieldset>
+      <legend>라디오버튼</legend>
+      <!-- 
+      태그에 이름을 지정 -> 클래스class, 아이디id, 네임name
+      
+      -->
+      <div>
+        <input type="radio" name="address" id="address1"> 
+        <label for="address1">집</label>
+
+        <input type="radio" name="address" id="address2"> 
+        <label for="address2">학교</label>
+
+        <input type="radio" name="address" id="address3"> 
+        <label for="address3">회사</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>체크박스</legend>
+      <div>
+        <p class="title">취미</p>
+        <div>
+          <label for="habbit1">독서</label>
+          <input type="checkbox" name="habbit" id="habbit1"  checked>
+          
+          <label for="habbit2">영화보기</label>
+          <input type="checkbox" name="habbit" id="habbit2">
+        </div>
+      </div>
+    </fieldset>
+    <fieldset>
+      <legend>다양한 버튼</legend>
+      <div>
+        <input type="reset" >
+        <input type="submit" >
+        <input type="button" >
+      </div>
+      <div>
+        <input type="reset" value="취소">
+        <input type="submit" value="확인">
+        <input type="button" value="버튼">
+      </div>
+      <div>
+        <input type="file" >
+      </div>
+    </fieldset>
+  </form>
+</body>
+</html>
