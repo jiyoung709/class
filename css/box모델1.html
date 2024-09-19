@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box모델1.html</title>
+  <style>
+    .box{
+      background-color: #ccc;
+      /* margin:30px; */
+      /* border: 1px solid #000; */
+      /* padding: 20px;*/
+      width:200px;
+      height: 200px; 
+    }
+
+    /* 요소 수평 lm + lb + lp + w + rp +rb +rm     
+    요소 수직 tm + tb + tp + h +bp + bb + bm
+    */
+    /* 
+      box sizing
+      292px(242px) h-size  
+      lm 40px lb 1px lp 20px w 200px rp 20px rb 1px rm 10px
+      v-size
+      282px(242)
+      tm 10xp tb 1px tp 20px h 200px bp 20px bb 1px bm 30px
+
+    */
+    .box1{
+      margin:10px 20px 30px 40px; /* margin:상 우 하 좌 */
+      border:1px solid #000;
+      padding:20px; /* padding: 상우하좌; */
+      
+    }
+
+    /*.box2 
+    h-size 324(284)
+    lm 20px + lb 10px + lp 2em + w 200px  + rp 2em +rb 10px +rm 20px
+    v-size 292(252)
+    tm 10px + tb 10px + tp 1em  + h 200px +bp 1em  + bb 10px + bm 30px
+    */
+    .box2{
+      margin:10px 20px 30px;    /* margin:상 좌우 하 */
+      border:10px dotted #000;
+      padding:1em 2em; /*padding:상하 좌우;*/
+    }
+    .box3{
+      margin:10px 20px;/* margin: 상하 좌우 */
+      border-top:10px dashed #000;
+      padding: 30px 3em 10px; /*padding: 상 좌우 하;*/
+    }
+  </style>
+</head>
+<body>
+  <!-- div.box.box$*3>{box$} -->
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+</body>
+</html>
