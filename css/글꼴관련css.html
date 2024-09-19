@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>글꼴관련css.html</title>
+  <style>
+    span.title{
+      font-weight: 600;
+    }
+    section{
+      background-color: #ccc;
+      color:#00f;
+      /* font-size:100%; */
+      /* font-size:14px; */ /*10.5pt*/ 
+       /*font-size:0.0875%; */
+      /* font-size:0.875em; 16px->1em 계산하는 방법 */
+      /* 
+      font-size 기본
+      16px 14pt 1em 100% */
+      font-size: 1em;
+      /* line-height: 100%; */
+      /* line-height: normal; */
+      line-height: 1.4;
+    }
+    span{
+      color:#f00;
+    }
+    .title{
+      font-weight: 800;
+    }
+    .section2 span{
+      color:#0f0;
+    }
+   body{
+    color:#f0f;
+   }
+  </style>
+</head>
+<body>
+  <!-- section.section$*3>p>lorem -->
+  <section class="section1">
+    <p>Lorem <span class="title">ipsum</span> dolor sit amet consectetur, adipisicing elit. Dolores veritatis sint asperiores delectus officiis alias autem modi sapiente necessitatibus provident id impedit aliquam hic debitis, aspernatur mollitia? Perferendis, voluptatum illum.</p>
+  </section>
+  <section class="section2">
+    <p>Fugiat <span>reiciendis</span> aperiam ea reprehenderit facere optio saepe ipsa! Illo expedita natus debitis perspiciatis esse culpa doloremque? Numquam consequatur officia quibusdam pariatur architecto, laborum in reiciendis! Distinctio molestiae doloribus ea.</p>
+  </section>
+  <section class="section3">
+    <p>Ea <span>porro</span> reprehenderit voluptatum totam labore iusto obcaecati numquam unde repellat non. Quae praesentium incidunt molestiae necessitatibus magni ut, accusantium error sequi illo laborum minus ratione nisi at debitis nesciunt.</p>
+  </section>
+
+   <!-- p>a>{글꼴을 상속받지않는 a태그} -->
+    <!-- a태그의 글자색(color)을 지정하려면 조상아닌
+    a태그 본인에게 color 지정 
+    -->
+   <p><a href="">글꼴을 상속받지않는 a태그</a></p>
+   <!-- p>lorem -->
+   <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos possimus, temporibus recusandae saepe labore cum consequatur vel corporis quia id unde voluptatem sunt natus ratione explicabo. Cum tempore placeat reiciendis.</p>
+</body>
+</html>
