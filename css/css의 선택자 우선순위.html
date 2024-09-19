@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css의 선택자 우선순위</title>
+<style>
+  /* 문서내 모든 .section */
+  .section{
+    border:1px solid #864;
+    background-color: #eccfb1;
+    padding:20px 20px;
+  }
+
+  /* 
+   문서 내 모드 .wrap 의 직계자식  .inner
+  .wrap > .inner  
+
+   문서내 모든 .wrap 의 후손 중 .inner
+  .wrap .inner
+  */
+  /*문서 내 모드 .wrap 의 직계자식  .inner x*/
+  .wrap > .inner{
+    background-color: #ccc;
+  }
+  /*문서 내 모드 .wrap 의 후손 .inner 0*/
+  .wrap .inner{
+    background-color: #660;
+  }
+
+/* 문서내 모든 .section 찾아서 그중 후손 중 모든 p 선택 */
+  .section p{    background-color: #ccc;  }
+
+/* 문서내 모든 #section1 찾아서 그중 후손 중 모든 p 선택 */
+  #section1 p{    background-color: #f00;  }
+
+</style>
+</head>
+<body>
+  <!-- .wrap>div.section#section$*2>div.inner>p>{section$-item} -->
+  <div class="wrap">
+    <div class="section" id="section1">
+      <div class="inner">
+        <p>section1-item</p>
+      </div>
+    </div>
+    <div class="section" id="section2">
+      <div class="inner">
+        <p>section2-item</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
