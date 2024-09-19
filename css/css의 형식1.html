@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>css의 형식1.css</title>
+  <!-- html 코멘트 -->
+  <style>
+    /* css코멘트 */
+    /* 
+       css 구문 형식
+       선택자 {속성:값1 값2 값3; 속성:값; 속성:값;}
+       선택자 {
+        속성:값1 값2 값3; 
+        속성:값; 
+        속성:값;
+        }
+    */
+    /* 태그선택자  body */
+  body{background-color: #864; color:yellow; margin:0;}
+  /* 클래스선택자  .section2*/
+  .section2{ background-color: #ccc;  }
+  /* 아이디선택 #wrap */
+  #wrap{color:#000;}
+
+  /* 
+  .main 클래스main
+  □(공백)  후손
+  .section 클래스section
+  > 직계자식
+  div
+
+  클래스main  후손 중  클래스section  직계자식 div 선택
+  */
+  .main .section > div{
+    background-color: #f00;
+  }
+
+  /* 
+  클래스main 중 직계 자식 div
+  html 구조 상 해당되는 선택자x
+  */
+  .main > div{
+    background-color: #0f0;
+  }
+
+  /* 
+  클래스main 후손 중 div 선택자
+  */
+  .main  div{
+    background-color: #00f;
+  }
+    
+  </style>
+</head>
+<body>
+  <!-- #wrap -->
+  <div id="wrap">
+    <!-- div.header -->
+    <!-- ctrl + enter vscode 커서만 이동하는 줄바꿈 -->
+    <div class="header"></div>
+    <div class="main">
+      <!-- section.section.section$*3 -->
+       <!-- section.section.section$*3>div.inner>p*3>{아이템$}   -->
+      <!--emmet 표기법 {텍스트}  -->
+       <section class="section section1">
+        <div class="inner">
+          <p>아이템1</p>
+          <p>아이템2</p>
+          <p>아이템3</p>
+        </div>
+       </section>
+       <section class="section section2">
+        <div class="inner">
+          <p>아이템1</p>
+          <p>아이템2</p>
+          <p>아이템3</p>
+        </div>
+       </section>
+       <section class="section section3">
+        <div class="inner">
+          <p>아이템1</p>
+          <p>아이템2</p>
+          <p>아이템3</p>
+        </div>
+       </section>  
+    </div>
+  </div>
+</body>
+</html>
