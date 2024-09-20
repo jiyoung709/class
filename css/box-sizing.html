@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>box-sizing</title>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .box.box$*3>{box$} -->
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+  </div>
+  <style>
+    .wrap{
+      width:600px;
+      border:1px solid #000;
+      /* 블록레벨의 가운데 정렬 */
+      /* 20px 상하  , auto 좌우2 */
+      margin:20px auto;
+      padding:50px;
+      background-color: #ccc;
+    }
+    .box{
+      background-color: #86c;
+      margin:20px;
+      height: 100px;
+      width:400px;
+      border:10px dashed #f00;
+      padding:50px;
+    }
+    .box1{}
+    /* wdith  -> border + padding + content */
+    .box2{box-sizing: border-box;}
+    /* width -> width */
+    .box3{box-sizing: content-box;}
+    
+  </style>
+</body>
+</html>
