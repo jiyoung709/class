@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>네비게이션만들기1 - 1depth만 있는 nav</title>
+  <style>
+    *{margin:0; padding:0;}
+    #header{
+      background-color: #ccc;
+    }
+    #header .inner{
+      width:1024px; margin:0 auto;
+      border: 1px solid #000;
+    }
+   
+    /* 
+     카테고리의 모든 li 선택
+    .top_category ul li{}
+    .top_category ul > li{} */
+    /* 카테고리의 1depth 선택 */
+    /*  .top_category의 직계자식 ul을 찾아서 직계자식 li에게 적용 */
+    .top_category > ul > li{
+      /* display: inline; li 나란히 배치*/
+      width:8em;
+      display: inline-block;
+      /* height: 50px; 
+         메뉴가 위로 쏠리고 하단 여백은 링크값이 없어서
+      */
+      /* 목록태그의 번호, 블릿 제거 */
+      list-style: none;
+      background-color: #ff0;
+      border: 1px solid #f00;
+    }
+    .top_category ul{
+      /* li를 inlin-block으로 지정해서 텍스트를 정렬하는 명령으로 설정 */
+      text-align: center;
+    }
+
+    .top_category > ul > li > a{
+      /* 너비는 부모할당 높이는 자식에게 할당 */
+      /* block 너비높이 할당 가능 */
+      display: block;
+      /* height: 50px;  글자가 위로 쏠리고*/
+
+      /* 
+      높이를 정확하게 알수 없어요
+      padding-top:10px;
+      padding-bottom:10px; */
+
+      /* 한줄문장일 때 정확한 높이를 지정한 텍스트 */
+      line-height: 50px;
+      border: 1px solid #00f;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrap">
+     <!-- header#header.layout1 -->
+     <header id="header" class="layout1">
+      <div class="inner">
+         <!-- div.top-category>ul>li*5>a>{menu$} -->
+         <div class="top_category">
+          <ul>
+            <li><a href="">menu1</a></li>
+            <li><a href="">menu2</a></li>
+            <li><a href="">menu3</a></li>
+            <li><a href="">menu4</a></li>
+            <li><a href="">menu5</a></li>
+          </ul>
+         </div>
+      </div>
+
+     </header>
+  </div>
+</body>
+</html>
