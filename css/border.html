@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>border</title>
+  <style>
+    /*reset*/
+     *{margin:0; padding:0;}
+    /*layout*/
+      .header-inner{
+        width:90%; margin:0 auto;
+        max-width: 1680px;
+        min-width: 320px;
+        border: 1px solid #000;/*테스트 후 삭제*/
+      }
+      .content-inner{
+        width:90%; margin:0 auto;
+        max-width: 1680px;
+        min-width: 320px;
+        border: 1px solid #000;/*테스트 후 삭제*/
+      }
+      .footer-inner{
+        width:90%; margin:0 auto;
+        max-width: 1680px;
+        min-width: 320px;
+        border: 1px solid #000;/*테스트 후 삭제*/
+      }
+    /*common*/
+
+    .header{
+      padding:20px 0px;
+      border-bottom:1px solid #ccc;
+      /* background-color: #869; */
+    }
+
+    .content{}
+    .footer{
+      padding:20px 0;
+      /* background-color: #666; */
+      border-top:1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .header+.content+.footer -->
+    <div class="header">
+      <!-- .header-inner>{헤더} -->
+      <div class="header-inner">헤더</div>
+    </div>
+    <div class="content">
+       <!-- .content-inner>{content} -->
+       <div class="content-inner">content</div>
+    </div>
+    <div class="footer">
+       <!-- .footer-inner>{footer} -->
+       <div class="footer-inner">footer</div>
+    </div>
+  </div>
+</body>
+</html>
