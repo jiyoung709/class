@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>overflow</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{margin:20px auto; width:80%;}
+    .box{
+      width: 200px;
+      height: 100px;
+      margin-bottom: 50px;
+      background-color: #6f6;
+    }
+    /* overflow:visible  초기값 */
+    .box1{overflow: visible;}
+    .box2{overflow: hidden;}
+    .box3{overflow: scroll;}
+    .box4{overflow: auto;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .box.box$*4>{box$}+lorem20 -->
+    <div class="box box1">
+      box1
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam dolores, vel eaque suscipit ipsum cum vitae facere doloribus asperiores dolorem.
+    </div>
+    <div class="box box2">
+      box2
+      Odio, molestiae? Exercitationem, odit minima culpa consectetur sapiente earum iste sequi cum esse reiciendis excepturi velit quasi repellendus. Velit, odio.
+    </div>
+    <div class="box box3">
+      box3
+      Cupiditate, omnis ducimus eum dolor alias excepturi, quod veniam ipsam dignissimos odio repudiandae sapiente quidem repellendus qui, molestias rerum necessitatibus?
+    </div>
+    <div class="box box4">
+      box4
+      Consectetur unde placeat fugiat, explicabo doloremque aut ab eos! Explicabo magni voluptatem quaerat aliquam? Quidem quaerat sunt autem amet atque.
+    </div>
+  </div>
+</body>
+</html>
