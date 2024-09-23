@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>웹폰트1</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap"
+      rel="stylesheet"
+    />
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+      /*reset*/
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .title-text {
+        font-size:100px; 
+        font-family: "Noto Sans KR", sans-serif;
+      }
+      .title-text:first-child{
+        font-weight: 100;
+      }
+      ol{
+        margin-left:3em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <!-- .title-text -->
+      <div class="title-text">준비된 퍼블리셔</div>
+      <div class="title-text">준비된 퍼블리셔</div>
+    </div>
+    <hr>
+    <p><strong>웹폰트 설정 순서</strong></p>
+    <ol>
+      <li>선언1 @font-face선언</li>
+      <li>선언2 선언한 @font-face안 에 서체의 이름과 서체 화일이 있는 URL 지정</li>
+      <li>사용 font-family로 지정</li>
+    </ol>
+  </body>
+</html>
