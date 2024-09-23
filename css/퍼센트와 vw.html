@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>퍼센트와 vw차이</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100..900&display=swap"
+    rel="stylesheet" />
+  <style>
+    /*reset*/
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    /* 
+      브라우저 화면 full size로 사용
+      */
+    .wrap {
+      /* width: 100vw; */
+      width: 100%;
+      height: 100vh;
+      background-color: #66f;
+      text-align: center;
+      /* .wrap의 자식 중 인라인레벨의 수평정렬  후손 상속*/
+      align-content: center;
+      /* 블록레벨(.wrap)의 직계자식의 수직정렬 */
+
+    }
+
+    .title-text {
+      font-size: 100px;
+      font-family: "Noto Sans KR", sans-serif;
+    }
+
+    .title-text:first-child {
+      font-weight: 100;
+    }
+
+    /*단위 %  가장가까운 블록레벨의 요소가 기준*/
+    /* css block 기본값
+        너비 -> 부모 content 수평영역 다 사용 (auto)
+        높이 -> 자식의 내용만큼 높이
+        */
+    .box-p {
+      width: 200px;
+      height: 300px;
+
+      background-color: #0ff;
+    }
+
+    /* 
+      .box-c 의 부모 요소에 height가 지정되어 있지 않으면 %은 작동x
+      */
+    .box-c {
+      width: 50%;
+      height: 50%;
+      background-color: #f9f;
+    }
+
+    .box1 {
+      width: 100%;
+      min-height: 200px;
+      background-color: #f66;
+    }
+
+    .box2 {
+      /* width: 100vw; */
+      min-height: 200px;
+      background-color: #696;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- .title-text -->
+    <div class="title-text">준비된 퍼블리셔</div>
+  </div>
+
+  <!-- div.box-p>div.box-c -->
+  <div class="box-p">
+    <div class="box-c">
+      Lorem ipsum, dolor sit amet consectetur adipisicing.
+    </div>
+  </div>
+
+  <div class="box1"></div>
+  <div class="box2"></div>
+</body>
+
+</html>
