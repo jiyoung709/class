@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>웹폰트1</title>
+    <title>퍼센트와 vw차이</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,6 +17,12 @@
         margin: 0;
         padding: 0;
       }
+      .wrap{
+        /* width:100%; */
+        width:100vw;
+        height: 50vh;
+        background-color: #66f;
+      }
       .title-text {
         font-size:100px; 
         font-family: "Noto Sans KR", sans-serif;
@@ -24,25 +30,44 @@
       .title-text:first-child{
         font-weight: 100;
       }
-      ol{
-        margin-left:3em;
+
+      /*단위 %  가장가까운 블록레벨의 요소가 기준*/
+      /* css block 기본값
+        너비 -> 부모 content 수평영역 다 사용 (auto)
+        높이 -> 자식의 내용만큼 높이
+        */
+      .box-p{
+        width:200px;
+        height: 300px;
+
+        background-color: #0ff;
       }
+      /* 
+      .box-c 의 부모 요소에 height가 지정되어 있지 않으면 %은 작동x
+      */
+      .box-c{
+        width:50%;
+        height: 50%;
+        background-color: #f9f;
+      }
+
+
+
     </style>
 
 
   </head>
   <body>
-    <div class="wrap" style="font-family: 'Nanum Pen Script', cursive;">
+    <div class="wrap">
       <!-- .title-text -->
       <div class="title-text">준비된 퍼블리셔</div>
-      <div class="title-text">준비된 퍼블리셔</div>
+      
     </div>
-    <hr>
-    <p><strong>웹폰트 설정 순서</strong></p>
-    <ol>
-      <li>선언1 @font-face선언</li>
-      <li>선언2 선언한 @font-face안 에 서체의 이름과 서체 화일이 있는 URL 지정</li>
-      <li>사용 font-family로 지정</li>
-    </ol>
+ 
+  
+    <!-- div.box-p>div.box-c -->
+    <div class="box-p">
+      <div class="box-c">Lorem ipsum, dolor sit amet consectetur adipisicing.</div>
+    </div>
   </body>
 </html>
