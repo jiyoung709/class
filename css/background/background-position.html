@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-positon</title>
+  <style>
+    /* 모든 요소에 margin과 padding을 0 */
+    *{margin: 0; padding: 0;}
+    /* 
+    .box
+    배경색을 #f66
+    바깥아래여백을 30px
+    박스모델계산법을 border+padding+콘텐츠영역으로 변경
+    최소높이를 500px;
+    배경이미지를 sun.png로 넣고 반복하지 않게 설정
+    안쪽 여백을 50px
+    테두리를 10px 점선 #63f
+    */
+    
+    .box{
+      background-color: #f66;
+      margin-bottom: 30px;
+      box-sizing: border-box;
+      min-height: 500px;
+      background-image: url(./images/sun.png);
+      background-repeat: no-repeat;
+      padding: 50px;
+      border: 10px dashed #63f;
+    }
+    .box1{background-position:left top ;}
+    /* .box2{background-position: right top;} */
+    .box2{background-position:100% 0% ;}
+    .box3{background-position: 50px 100px;}
+    .box4{background-position:center;}
+   </style>
+</head>
+<body>
+  <!-- .box.box1 box.box2~4 4개요소 그자식 텍스트 box1~4 -->
+   <div class="box box1">box1</div>
+   <div class="box box2">box2</div>
+   <div class="box box3">box3</div>
+   <div class="box box4">box4</div>
+</body>
+</html>
