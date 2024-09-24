@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>다중배경이미지</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .box{
+      background-color: #ffc;
+      height: 500px;
+
+      background-image: 
+         url(./images/sun.png) ,
+         url(./images/field2.png), 
+         url(./images/flower.png);
+
+      background-repeat: 
+      no-repeat,
+      repeat-x,
+      repeat-x;
+
+      /* calc(값1 연산자 값2) */
+      background-position: 
+       calc(100% - 60px) 20px,
+       0 100%,
+       50% 100%;
+      background-size: 
+       auto,
+       auto 5%,
+       auto 150px;
+    }
+    /* 다중테스트용 */
+    /* .box{
+      background-image: url(./images/sun.png), url(./images/bg.jpg);
+       background-image: url(./images/bg.jpg),url(./images/sun.png) ; 
+      background-size: auto , cover;
+      background-repeat: no-repeat, repeat;
+    } */
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  
+</body>
+</html>
