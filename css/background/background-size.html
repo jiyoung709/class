@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-size.html</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{margin:50px;}
+    .box{
+      /* width: 200px; */
+      height: 500px;
+      background-color: #f66;
+      margin-bottom: 20px;
+      background-image: url(./images/bg.jpg);
+      background-repeat: no-repeat;
+
+    }
+    .box1{background-size:150px 200px ;}
+    .box2{background-size: 50% 80%;} /*이미지의 크기를 요소를 기준으로 %*/
+    .box3{
+      background-size: cover;
+      background-position: center;
+    }
+    /* background-size: cover;
+     이미지가 잘리더라도 화면에 꽉차게 보일 수 있게 크기 조정
+    */
+    .box4{background-size: contain;}
+     /* background-size: contain;
+     이미지가 잘리지 않게 원래 이미지 비율을 유지하면서 가로나 세로가 꽉 차게
+    */
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .box.box$*4>{box$} -->
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+  </div>
+</body>
+</html>

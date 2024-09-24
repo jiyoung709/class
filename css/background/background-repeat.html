@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>background-repeat</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .box{
+      width: auto; height: 400px;
+      border:10px dashed #63f;
+      padding:50px;
+      margin:30px;
+      /* background 색상 이미지 border영역부터 */
+      background-color: #f66;
+      margin-bottom:20px;
+      background-image: url(./images/sun.png);
+    }
+    .box1{background-repeat: repeat;}
+    .box2{background-repeat: no-repeat;}
+    .box3{background-repeat: repeat-x;}
+    .box4{background-repeat: repeat-y;}
+  </style>
+</head>
+<body>
+  <!-- .box.box$*4>{box$} -->
+  <div class="box box1">box1</div>
+  <div class="box box2">box2</div>
+  <div class="box box3">box3</div>
+  <div class="box box4">box4</div>
+</body>
+</html>
