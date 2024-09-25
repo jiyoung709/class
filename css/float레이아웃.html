@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>float 레이아웃</title>
+  <style>
+    *{margin: 0;padding: 0; box-sizing: border-box;}
+    .wrap{
+      background-color: #ff6;
+    }
+    header{
+      background-color: #f00;
+    }
+    main#main{
+      background-color: #ccc;
+      overflow: hidden; /*★★★★★float를 준 자식 준 요소 인식시키기위해  */
+    }
+    /*★★★★★float를 준 요소 뒤에 요소 float의 영향을 제거하기 위해서 */
+    main#main::after{
+      content:"";
+      display: block;
+      clear: both;
+    }
+    #main aside.lnb{
+      width:150px;
+      min-height: 500px;
+      margin-right:20px;
+      background-color: #6f6;
+      float:left; /* 단처리를 위해서 */
+    }
+    #main div.content{
+      /* aside.lnb 150 + 20 +  
+      aside.right-aside 20 + 150px */
+      width: calc( 100% - ( 150px + 20px + 20px + 150px));
+      min-height: 500px;
+      background-color: #f66;
+      float:left; /* 단처리를 위해서 */
+    }
+    #main aside.right-aside{
+      width:150px;
+      min-height: 500px;
+      margin-left:20px;
+      background-color: #f6f;
+      float:right; /* 단처리를 위해서 */
+    }
+    footer{
+      background-color: #00f;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>헤더</header>
+    <main id="main">
+      <aside class="lnb">메뉴</aside>
+      <div class="content">진짜내용</div>
+      <aside class="right-aside">배너</aside>
+    </main>
+    <footer>푸터</footer>
+  </div>
+</body>
+</html>

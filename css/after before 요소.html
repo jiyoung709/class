@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>after before 요소</title>
+  <style>
+    .exam:before{
+      content:'요소 앞 가상요소';
+      background-color: #f00;
+    }
+    .exam:after{
+      content:'요소 뒤 가상요소';
+      background-color: #f00;
+
+    }
+  </style>
+</head>
+<body>
+  <p class="exam">
+    모든 요소에는 가상 이전 이후 요소가 존재
+  </p>
+  <p> 모든 요소에 after before 존재</p>
+</body>
+</html>

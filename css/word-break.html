@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>word-break</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        margin: 20px auto;
+        width: 400px;
+        border: 1px solid #000;
+      }
+      .box1{
+        word-break: keep-all;
+        text-align: center;
+      }
+      .box2{
+        word-break: normal;
+        text-align: center;
+      }
+      .box3{
+        word-break: break-all;
+        /* 영어도 단어단위 word wrap 아니라 문자 단위로 wrap */
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div class="box box1">
+      년시로 딘욤어고 도츠항이, 가갱인지라 아가눼를 조프이어요 으휸휴 롱가스만
+      라멜도미셔게 납잉암 가교에 사어안버라 엄햐힌다, 봑즈힌데의 자아와
+      랑인러싸는 간므이를 주셔에시도 오덧횐는다 메리현오다
+    </div>
+    <div class="box box2">
+      년시로 딘욤어고 도츠항이, 가갱인지라 아가눼를 조프이어요 으휸휴 롱가스만
+      라멜도미셔게 납잉암 가교에 사어안버라 엄햐힌다, 봑즈힌데의 자아와
+      랑인러싸는 간므이를 주셔에시도 오덧횐는다 메리현오다
+    </div>
+    <div class="box box3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      temporibus nam doloribus illo officia totam sequi ab quae, libero harum!
+    </div>
+    <div class="box box4">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis
+      temporibus nam doloribus illo officia totam sequi ab quae, libero harum!
+    </div>
+  </body>
+</html>

@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>table 관련 css</title>
-  <style>
-    *{margin: 0; padding: 0;}
-    .table-wrap{
-      width:600px;
-      margin:20px auto;
-      background-color: #ccc;
-    
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>table 관련 css</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .table-wrap {
+        width: 600px;
+        margin: 20px auto;
+        background-color: #ccc;
+      }
 
-    /* 
+      /* 
     편리를 위해서
     table을 block 레벨로 감싸요
     테이블에 width:너비;
@@ -24,76 +26,209 @@
     border-right:너비 색상 스타일;
     
     */
-    table.table-1{
-      border: 1px solid #000;
-      border-collapse: collapse;
-      /* border-collapse: separate; */
-      width: 100%;
-    }
-    .table-1 th,
-    .table-1 td{
-      border:1px solid #f00;
-      width:100px;
-    }
+      table.table-1 {
+        border: 1px solid #000;
+        border-collapse: collapse;
+        /* border-collapse: separate; */
+        width: 100%;
+      }
+      .table-1 th,
+      .table-1 td {
+        border: 1px solid #f00;
+        width: 100px;
+      }
 
-    /* 테이블이 너비와 테두리 지정 */
-    /* table을 블록레벨로 감싸요 너비를 부모에 지정 */
-    table.table-2{
-      width: 100%;
-      /*테이블과 셀의 테두리를 같이*/
-      border-collapse: collapse;
-      /* table, th,td  너비를 지정해서 사용 */
-      table-layout: fixed;
-      border: 1px solid #f00;/*테스트후 삭제*/
-    }
-    .table-2 th,
-    .table-2 td{
-      border: 1px solid #000;/*테스트후 삭제*/
-    }
-    /* td,th의 너비를 :nth-child() 가상클래스로 선택해 너비를 지어 */
-    .table-2 th:nth-child(1),
-    .table-2 td:nth-child(1){
-      width:100px;
-    }
-    .table-2 th:nth-child(2),
-    .table-2 td:nth-child(2){
-      width:auto;
-    }
-    .table-2 th:nth-child(3),
-    .table-2 td:nth-child(3){
-      width:100px;
-    }
-  </style>
-</head>
-<body>
-  <div class="table-wrap">
-    <table class="table-1">
-      <tr>
-        <th>data1</th>
-        <th>data2</th>
-        <th>data3</th>
-      </tr>
-      <tr>
-        <td>data1</td>
-        <td>data2</td>
-        <td>data3</td>
-      </tr>
-    </table>
-  </div>
-  <!-- 테이블의 너비와 테두리를 지정할 때 -->
-  <div class="table-wrap">
-    <table class="table-2">
-      <tr>
-        <th>data1</th>
-        <th>data2</th>
-        <th>data3</th>
-      </tr>
-      <tr>
-        <td>data1</td>
-        <td>data2</td>
-        <td>data3</td>
-      </tr>
-    </table>
-  </div>
-</body>
+      /* 테이블이 너비와 테두리 지정 */
+      /* table을 블록레벨로 감싸요 너비를 부모에 지정 */
+      table,
+      tbody,thead,
+      tr,
+      th,
+      td {
+        box-sizing: border-box;
+      }
+      table.table-2 {
+        width: 100%;
+        /*테이블과 셀의 테두리를 같이*/
+        border-collapse: collapse;
+        /* table, th,td  너비를 지정해서 사용 */
+        table-layout: fixed;
+        /*border: 1px solid #f00;테스트후 삭제*/
+        border-top: 4px solid #333;
+      }
+      .table-2 tr:nth-child(1) {
+        background-color: #333;
+        color: #fff;
+      }
+      .table-2 tr:nth-child(2) {
+        background-color: #fff;
+      }
+      .table-2 th,
+      .table-2 td {
+        /*border: 1px solid #000;테스트후 삭제*/
+        /* border-bottom: 1px solid #666; */
+        /* border-left:1px solid #666 */
+        border: #666;
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        padding: 0.5em 2em;
+      }
+      /* td,th의 너비를 :nth-child() 가상클래스로 선택해 너비를 지어 */
+      .table-2 th:nth-child(1),
+      .table-2 td:nth-child(1) {
+        width: 150px;
+        border-left: 0px;
+        text-align: center;
+        vertical-align: center;
+      }
+      .table-2 th:nth-child(2),
+      .table-2 td:nth-child(2) {
+        width: auto;
+        text-align: left;
+        vertical-align: top;
+      }
+      .table-2 th:nth-child(2) {
+        text-align: center;
+      }
+
+      .table-2 th:nth-child(3),
+      .table-2 td:nth-child(3) {
+        width: 150px;
+        text-align: right;
+        vertical-align: bottom;
+      }
+      /* table-3 */
+      table.table-3 {
+        width: 100%;
+        /*table tr th td 너비 지정위해*/
+        table-layout: fixed;
+        /* 테이블, 셀의 테두리를 합쳐서 표현
+        만약 셀사이 간격 주고 border-sapcing 지정
+      */
+        border-collapse: collapse;
+      }
+      .table-3 thead {
+        background-color: #66f;
+      }
+      .table-3 tbody {
+        /* background-color: #ff6; */
+        text-align: center;
+      }
+      .table-3 th:nth-child(1),
+      .table-3 td:nth-child(1) {
+        width: 15%;
+     
+      }
+      .table-3 th:nth-child(2),
+      .table-3 td:nth-child(2) {
+        width: 35%;
+      }
+      .table-3 th:nth-child(3),
+      .table-3 td:nth-child(3) {
+        width: 25%;
+      }
+      .table-3 th:nth-child(4),
+      .table-3 td:nth-child(4) {
+        width: 25%;
+      }
+      .table-3 th{
+        font-weight: 500;
+      }
+      .table-3 th,
+      .table-3 td{
+        border-bottom: 1px solid #66f;
+        padding: 0.5em 1em;
+      }
+     .table-3 tbody tr:nth-child(odd){
+      background-color: #ccf;
+     }
+     .table-3 tbody tr:nth-child(even){
+      background-color: #fff;
+     }
+     .table-3 tbody tr:hover{
+      background-color: #33f;
+     }
+
+    </style>
+  </head>
+  <body>
+    <div class="table-wrap">
+      <table class="table-1">
+        <tr>
+          <th>data1</th>
+          <th>data2</th>
+          <th>data3</th>
+        </tr>
+        <tr>
+          <td>data1</td>
+          <td>data2</td>
+          <td>data3</td>
+        </tr>
+      </table>
+    </div>
+    <!-- 테이블의 너비와 테두리를 지정할 때 -->
+    <div class="table-wrap">
+      <table class="table-2">
+        <tr>
+          <th>data1</th>
+          <th>data2</th>
+          <th>data3</th>
+        </tr>
+        <tr>
+          <td>data1</td>
+          <td>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
+            impedit quas non nisi molestiae dolor eligendi, autem quae rerum
+            aut!
+          </td>
+          <td>data3</td>
+        </tr>
+      </table>
+    </div>
+    <div class="table-wrap">
+      <table class="table-3">
+        <thead>
+          <tr>
+            <th>title1</th>
+            <th>title2</th>
+            <th>title3</th>
+            <th>title4</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- tr*3>td*4>{data} -->
+          <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+          </tr>
+          <tr>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+            <td>data</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </body>
 </html>
