@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>font-size</title>
+  <style>
+    *{margin: 0;padding: 0;}
+   html, body{
+      font-family: arial, "굴림체","궁서체";
+      font-size:14px; /*14px 10.4pt 0.875em;*/
+      color:#333;
+    }
+
+    /* a태그는 조상의 color 값을 상속x
+    a태그 본인에게 color 지정
+    */
+    a{color:#333; text-decoration: none;}
+    a:hover{color:#00f; text-decoration: underline;}
+    
+    header>div:nth-child(1){
+      font-family: "맑은 고딕";
+      /* font-size에서 사용되는 em은 부모의 font-size 1em */
+      /* font-size:2em; */
+      /* padding:1em; */
+      /* font-size아닌 property에서 em을 사용하면 자신의 font-size의 크기를 기준 1em*/
+    }
+
+    header>div:nth-child(1){
+      font-size:2rem;
+      padding:1rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- .wrap>header>nav>ul>li*3>a>{링크값} -->
+  <div class="wrap">
+    <header>
+      <div>Lorem ipsum dolor sit amet.</div>
+      <nav>
+        <ul>
+          <li><a href="">링크값</a></li>
+          <li><a href="">링크값</a></li>
+          <li><a href="">링크값</a></li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+</body>
+</html>
