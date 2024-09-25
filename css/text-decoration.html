@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>text-decoration</title>
+  <style>
+    p:nth-child(1){text-decoration: underline;}
+    p:nth-child(2){
+      text-decoration-line: underline;
+      text-decoration-color: #f00;
+      text-decoration-style: wavy;
+      text-decoration-thickness: 5px;
+    }
+    /* ↓ 선택자만 다르고 속성 지정은 동일한 */
+    p:nth-child(3){
+      text-decoration: underline #f00 wavy 5px    ;
+    }
+    p:nth-child(4){text-decoration: #f00 line-through 3px;}
+
+  </style>
+</head>
+<body>
+  <p>가나다라</p>
+  <p>가나다라</p>
+  <p>가나다라</p>
+  <p>가나다라</p>
+</body>
+</html>
