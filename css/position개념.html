@@ -25,12 +25,18 @@
       border:10px solid #000;
     }
     .box-p{
-      background-color: #ff6;
+      background-color: rgb(255, 255, 102, 0.2);
     }
     .box-c{
       /* width를 선언하지 않으면 width:auto */
       height: 100px;
       background-color: #66f;
+      position: absolute;
+      /* .box-p 너비를 가져오지 x */
+      /* 기준요소는 가까운 조상부터 position:static 제외 postion 값을 가진 조상이 기준요소
+      margin 제외 border 제외 한 0,0
+      */
+      left:0; top:0
     }
     .box1{
       position: static;
@@ -62,6 +68,12 @@
       */
       position: absolute;
       left:0; top:0;
+    }
+    .box4{
+      position: fixed;
+      left:0; top:0;
+      width:100%;
+      box-sizing: border-box;
     }
   </style>
 </head>
