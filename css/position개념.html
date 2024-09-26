@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position 개념</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .wrap{
+      /* .box3의 기준요소가 되기 위해 지정 */
+      position: relative;
+      /* margin의 기준요소 좌표에 포함x */
+      margin:50px;
+      /* padding은 absolute의 좌표에 포함되요 */
+      padding:50px;
+      background-color: #ccc;
+
+    }
+    .box{
+      box-sizing: content-box;
+      /* box-sizing: border-box; */
+      width:200px; height: 200px;
+      /* margin:20px;  */
+      padding:20px;
+      border:10px solid #000;
+    }
+    .box-p{
+      background-color: #ff6;
+    }
+    .box-c{
+      /* width를 선언하지 않으면 width:auto */
+      height: 100px;
+      background-color: #66f;
+    }
+    .box1{
+      position: static;
+      left:200px; top:200px;
+    }
+    .box2{
+      /* 
+      z-index 적용
+      left right top bottom 적용
+      기준 본인 원래 위치
+      일반 흐름을 유지
+      ★★★★★
+      position:absolute 의 기준요소가 될수 있어요   
+      ★★★★★
+      */
+      position: relative;
+      /* left:200px; top:200px; */
+    }
+    .box3{
+      /* 
+      position: absolute;
+      일반흐름에 제외(부모요소 인식x)
+      ★★★
+      기준요소 시작  해당 0,0
+      ★★★
+      */
+      /* 
+        조상들에게 positon:static 을 제외한 position값을 지정한게 없으면 body가 기준요소
+      */
+      position: absolute;
+      left:0; top:0;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box box1 box-p">
+      <div class="box-c">box1</div>
+    </div>
+    <div class="box box2 box-p">
+      <div class="box-c">box2</div>
+    </div>
+    <div class="box box3 box-p">
+      <div class="box-c">box3</div>
+    </div>
+    <div class="box box4 box-p">
+      <div class="box-c">box4</div>
+    </div>
+  </div>
+</body>
+</html>
