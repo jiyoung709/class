@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* reset */
+*{margin:0; padding: 0; 
+  box-sizing: border-box;}
+
+/* 테스트 화면용 */
+.wrap{
+  margin:50px
+}
+
+/* card desgin */
+.card{
+  width:300px;
+  border: 1px solid #f00;/*테 후 삭제*/
+  background-color: #ccc;/*테 후 삭제*/
+}
+.card .card__thumbnail{
+   background-color: #ff6;
+}
+.card .card__thumbnail a{
+  /*부모의 너비를 따르기 위해서*/
+  display: block; 
+
+}
+.card .card__thumbnail a img{
+  /*부모의 너비를 따르기 위해서*/
+  display: block; 
+  /* 부모의 너비를 따르면서 자신의 원래 크기보다는 커지지 말아라 */
+  /* max-width: 100%; */
+  /* 부모의 너비를 따라라 */
+  /* height를 생략하면 원래 이미지의 가로세로 비율을 유지 */
+  width:100%;
+}
+
+.card .card__description{
+  padding:1rem 0.8rem;
+  background-color: #fff;
+}
+.card .card__description .card__title{
+  margin-bottom: 0.8rem;
+  
+}
+.card .card__description .card__spec{}
