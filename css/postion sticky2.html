@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>position sticky2</title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+    /* common */
+    .clearfix{overflow: hidden;}
+    .clearfix::after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    /* layout */
+    .wrap{}
+    header{
+      background-color: #ccc;
+      min-height: 150px;
+    }
+    .main{     }
+    /* 1col 1단 */
+    .main .left-lnb{
+      float:left;
+      background-color: #ff6;
+      /* float를 지정한 요소는 너비를 지정해줍니다. */
+      width:150px;
+      min-height: 200px;
+
+    }
+     /* 2col 2단 */
+    .main .content{
+      float: left;
+      background-color: #6ff;
+      width:calc(100% - (150px + 150px + 40px + 40px));
+      margin-left:40px;
+      margin-right: 40px;
+      height: 1500px;
+    }
+     /* 3col 3단 */
+    .main .banner{
+      float: left;
+      background-color: #f6f;
+      width: 150px;
+      min-height: 200px;
+    }
+    footer{
+      background-color: #ccc;
+      min-height: 100px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>header</header>
+    <main class="main clearfix">
+      <div class="left-lnb">왼쪽 메뉴</div>
+      <div class="content">본문내용</div>
+      <div class="banner">배너</div>
+    </main>
+    <footer>푸터</footer>
+  </div>
+</body>
+</html>
