@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>transform</title>
+  <style>
+    *{margin: 0;padding: 0;}
+    .wrap{margin:50px; background-color: #ccc;}
+    .box{
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    .box:nth-child(odd){background-color: #f66;}
+    .box:nth-child(even){background-color: #66f;}
+    .box1{
+      /* transform: translate(50px, 100px); */
+      transform: translateX(50px) translateY(-50px);
+   /* transform: translateX(50px); x축만 이동 y축 이동x
+      transform: translateY(-50px); y축만 이동 x축 이동x*/
+    }
+    .box2{
+      /* transform: scale(1.5); */
+      /* transform: scale(0.5); */
+      transform: scale(1.5, 0.5);
+    }
+    .box3{
+      transform: rotate(45deg);
+    }
+    .box4{
+      /* transform: skew(20deg, -40deg); */
+      transform: skew(-20deg , 0);
+    }
+    .box5{
+      transform: 
+         scale(1.4) 
+         translate(150px, -50px)
+         rotate(90deg)
+         ;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="box box1">box1</div>
+    <div class="box box2">box2</div>
+    <div class="box box3">box3</div>
+    <div class="box box4">box4</div>
+    <div class="box box5">box5</div>
+  </div>
+</body>
+</html>
