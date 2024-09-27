@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 크기지정-반응형</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin:20px;
+      background-color: #ff6;
+      border: 1px solid #f00;
+    }
+    /* 이미지는 별도의 지정이 없으면 본인의 원래 크기로 표시 */
+    .media-wrap{
+      background: #6ff;
+      border: 1px solid #00f;
+    }
+    .media-wrap .img{
+      /* 부모의 너비를 따르지만 원래 이미지 크기보다 커지지 말아라 */
+      /* max-width: 100%;
+      height: auto; */
+      /* 부모의 너비를 따르는데 이미지의 높이를 제한 */
+      /* max-height: 400px;
+      width: auto; */
+      /* 부모의 너비를 따라라 */
+      width:100%;
+      height: auto;
+      display: block;/*이미지 아래 얇은 공백 생기는 현상을 없애기 위해서*/
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="media-wrap">
+      <img class="img" src="./background/images/bg.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
