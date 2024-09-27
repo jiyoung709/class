@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 크기지정-종횡비를 유지한 반응형</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin:20px;
+      background-color: #ff6;
+      border: 1px solid #f00;
+    }
+    /* 이미지는 별도의 지정이 없으면 본인의 원래 크기로 표시 */
+    .media-wrap{
+      width:300px;
+      background: #6ff;
+      border: 1px solid #00f;
+    }
+    .media-wrap .img{
+      display: block;
+      width:100%;
+ 
+    }
+
+    /* box 모델 개념 */
+    .box{
+      margin-left:50px;
+      /* border: 1px solid #000; */
+      background-color: #f6f;
+      width: 400px;
+      box-sizing: border-box;
+      height: 400px;
+      padding-top:400px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="media-wrap">
+      <!-- 종횡비를 유지하기 위해서 img의 부모요소를 추가 -->
+      <div class="img-wrap">
+        <img class="img" src="./background/images/bg.jpg" alt="">
+      </div>
+    </div><!--//media-wrap-->
+  </div>
+  <div class="box">box</div>
+</body>
+</html>

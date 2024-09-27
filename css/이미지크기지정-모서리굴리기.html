@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 크기지정-모서리굴리기</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin:20px;
+      /* background-color: #ff6;
+      border: 1px solid #f00; */
+    }
+ 
+    .media-wrap{
+      width:500px;
+      background: #fff;
+      border: 4px solid #fff;
+      /* 자식 이미지를 모서리를 둥굴게 굴리기 */
+      border-radius: 20px;
+      overflow: hidden;
+      /* padding:4px; */
+      box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+    }
+    .media-wrap .img{
+      display: block;
+      width:100%;
+      /* border-radius: 20px; */
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="media-wrap">
+      <img class="img" src="./background/images/bg.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
