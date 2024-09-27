@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>이미지 크기지정</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    .wrap{
+      margin:20px;
+      background-color: #ff6;
+      border: 1px solid #f00;
+    }
+    /* 이미지는 별도의 지정이 없으면 본인의 원래 크기로 표시 */
+    .media-wrap{
+      background: #6ff;
+      border: 1px solid #00f;
+    }
+    .media-wrap .img{
+      /* width ,height 지정하지 않으면 auto */
+      /* width:400px; */
+      /*height: auto;이미지의 가로 세로 비율(종횡비) 유지*/
+      height: 400px;
+      /* width:auto; 원이미지 종횡비 유지한채 조절*/
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="media-wrap">
+      <img class="img" src="./background/images/bg.jpg" alt="">
+    </div>
+  </div>
+</body>
+</html>
