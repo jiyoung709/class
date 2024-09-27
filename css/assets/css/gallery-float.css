@@ -5,12 +5,19 @@
 /* reset */
 *{margin:0; padding: 0; 
   box-sizing: border-box;}
+ul,ol,li{list-style: none;}
 
 /* 테스트 화면용 */
 /* body{ background-color: #ff9;} */
 .wrap{
   margin:50px;
 }
+
+/* 갤러리 레이아웃 float */
+.card__list{}
+.card__list ul.card__wrap{}
+.card__list li.card__item{}
+.card__list div.card{}
 
 /* card desgin */
 .card{
@@ -20,6 +27,7 @@
 
 }
 .card .card__thumbnail{
+   /* background-color: #ff6; */
 
 }
 .card .card__thumbnail a{
