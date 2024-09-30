@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex1-가로세로 가운데정렬</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .container{
+      background: #ccc;
+    }
+       /* 
+    1. flex container 선언 -flex container
+    2. flex item의 방향 결정 -flex container
+    3. flex item 확장수축크기 결정 -flex item
+    4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단 -flex container
+    5. flex container를 부모요소 내 정렬 판단 - 일반적은 블록레벨의 정렬
+    6. flex item 정렬 판단(정렬은 container > item합)
+       6-1 주축의 방향 -continaer내의 모든 아이템 -flex container
+       6-2 교차 방향-continaer내의 모든 아이템 -flex container
+       6-3 교차 방향 개별아이템 정렬 -flex item
+    */
+    .flex-container{
+      display: flex; /*1*/
+      flex-direction: row;/*2 기본값이라 생략가능*/
+      flex-wrap: nowrap;/*4 기본값이라 생략가능*/
+      width: 100%;
+      height: 100vh;
+      justify-content: center;/*6-1 주축 방향 정렬*/
+      align-items: center;/*6-2 교차축 방향 정렬*/
+    }
+    .item{
+       flex-grow: 0;  /*3*/
+       flex-shrink: 0;/*3*/
+       flex-basis: auto;/*3*/
+       /* flex:none 동일  아이템을 고정크기로 할때 사용*/
+       width:30rem; /*3*/
+       padding:1rem 2rem;
+       background-color: #ff6;
+    }
+    .item .title{
+      font-size: 2rem;
+      margin-bottom: 0.5rem;;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- .container.flex-container>.item -->
+    <div class="container flex-container">
+      <div class="item">
+        <p class="title">섹션 제목</p>
+        <p class="desc">여러 줄 설명이 계속  여러 줄 설명이 계속 여러 줄 설명이 계속 여러 줄 설명이 계속 여러 줄 설명이 계속</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
