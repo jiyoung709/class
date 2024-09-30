@@ -13,6 +13,7 @@
     .container{
       width: 600px;
       background-color: magenta;
+      gap:2px;
     }
     .item{
       background-color: dodgerblue;
@@ -28,6 +29,70 @@
     6. flex item 정렬 판단
     
     */
+    /* 1. flex container 선언 */
+    /* 
+     display: flex; ->container
+     container 직계자식 ->flex item
+    */
+    .flex-container{
+      display: flex;
+    }
+
+    /* 2. flex item의 진행 방향 결정 
+      flex의 주축과 교차축의 방향 결정
+flex-direction: row;   -> 주축 수평방향
+flex-direction: column;  -> 주축 방향 수직방향
+    */
+    
+    .flex-container{
+      flex-direction: row;
+      /* flex-direction: column; */
+    }
+
+    /* 3. flex item 확장수축크기 결정
+    flex-grow: 0; -> item 확장 여부
+    flex-shrink: 1;  -> item 수축 여부
+    flex-basis: auto;  -> 크기를 지정하는 알고리즘 결정  width/height 지정
+    */
+
+    .item{
+    /* flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: auto; 
+    ↓동일
+    */
+    flex:none;
+     /* 주축에 방향에 맞게 width / height  지정 */
+     /* %단위로 가변크기로 지정 -반응형 */
+     /* width:150px;  600 / 4*/
+     /* width:calc(아이템크기 - 갭의크기) */
+     width:calc(25% - 2px);
+
+    }
+
+
+    /* 4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단 
+    
+    flex-container 
+    flex-direction:row;
+    width:600px;
+
+    .item{flex:none; width:150px;}
+    flex item 다합치면 150px *10
+
+ 
+  .flex-container{
+      flex-wrap: nowrap;  기본값
+    }
+
+
+      box-sizing: border-box; 전체하
+    .item크기가 ->     (width +gap ) /    height  +gap
+    아이템이 반복되서 진열되다 0.00n 크기부족다 줄바꿈
+    */
+    .flex-container{
+      flex-wrap: wrap;
+    }
 
   </style>
 </head>
