@@ -20,20 +20,61 @@
     }
     /* 여기서부터 flex 속성 */
     /* 
-    1. flex container 선언
-    2. flex item의 방향 결정
-    3. flex item 확장수축크기 결정
-    4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단
-    5. flex container 정렬 판단
-    6. flex item 정렬 판단
+    1. flex container 선언 -flex container
+    2. flex item의 방향 결정 -flex container
+    3. flex item 확장수축크기 결정 -flex item
+    4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단 -flex container
+    5. flex container를 부모요소 내 정렬 판단 - 일반적은 블록레벨의 정렬
+    6. flex item 정렬 판단(정렬은 container > item합)
+       6-1 주축의 방향 -continaer내의 모든 아이템 -flex container
+       6-2 교차 방향-continaer내의 모든 아이템 -flex container
+       6-3 교차 방향 개별아이템 정렬 -flex item
     */
    /*   1. flex container 선언-flex container */
    /* 2. flex item의 방향 결정-flex container  */
    /* 4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단  -flex container  */
+   /* 5. flex container를 부모요소 내 정렬 판단 
+     일반적인 block레벨 inline레벨 정렬하는것과 같이
+     -container   */
+   /* 6-1 주축의 방향 -continaer내의 모든 아이템-flex container  
+   justify-content: flex-start;
+   */
+   /* 6-2 교차 방향-continaer내의 모든 아이템
+     container를 교차축의 크기를 (width / height ) 지정
+   */
    .flex-container{
+    width:70%;
+    margin:auto; /*5*/
     display: flex; /*1*/
     flex-direction: row;/*2*/
     flex-wrap: nowrap; /*4*/
+    /*justify-content: flex-start;6-1*/
+    /* justify-content: flex-end;6-1 */
+    /* justify-content: center;  6-1*/
+    /* justify-content: space-between; */
+    /* 양끝정렬 아이템 사이는 균등한 여백 
+    컨테이너 경계선과 있는 아이템은 여백x
+    */
+    /* justify-content: space-around; */
+    /* 양끝정렬 아이템 사이는 균등한 여백  (경계여백*2)
+    컨테이너 경계선과 있는 아이템은 여백 여백0
+    */
+    /* justify-content: space-evenly;  6-1*/
+     /* justify-content: space-around;  6-1*/
+    /* 양끝정렬 아이템 사이는 균등한 여백 
+    컨테이너 경계선과 있는 아이템은 여백 여백0
+    */
+
+    height: 300px; /*6-2를 위한 사전준비*/
+     /* 6-2 교차 방향-continaer내의 모든 아이템
+      align-items: stretch;  
+     */
+     /* align-items: stretch; 6-2 */
+     /*6-2 
+     flex-direction : row;
+     서로다른 수직높이를 가직 요소를 수직 가운데정렬*/
+     align-items: center;   /*6-2*/
+
    }
 
    /* 3. flex item 확장수축크기 결정   - flex item
@@ -42,6 +83,11 @@
   .item{
     /* flex-grow: 0;    flex-shrink: 0;    flex-basis: auto; */
     flex:none; /*3*/
+  }
+
+  /* 6-3 개별아이템 정렬 -flex item -교차축 */
+  .item2{
+    align-self: flex-start;
   }
 
 
