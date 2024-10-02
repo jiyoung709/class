@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex7 flex-wrap의 활용</title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;box-sizing: border-box;}
+    .wrap{margin:50px;}
+    .container{
+      /* 배경색 회색 */
+      background-color: #ccc;
+    }
+    .item{
+      /* 배경색 skyblue */
+      background-color: skyblue;
+    }
+    /* 
+    1 flex 컨테이너가 되게 선언
+    2.flex 아이템의 방향을 수평 방향으로 선언
+     (즉 주축이 수평 교차축이 수직)
+    -flex 아이템간의 여백을 2px
+    3. 아이템 확장x 
+      아이템 수축x 
+      아이템 기본 크기 교차축의 크기에 맞춰 지정
+    4  flext item의 크기 총합이 flex container 크기보다 클 경우 줄바꿈
+    6-1주축의 방향 정렬 -균등배포(양끝 여백x)
+    */
+
+    .flex-container{
+      display: flex;
+      flex-direction: row;
+      gap:20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+    }
+    .flex-container .item{
+      flex:1 0 auto;
+      /* flex:none; */
+       /* flex-grow: 0;
+       flex-shrink: 0;
+       flex-basis: auto; */
+      width:calc(33.333% - 20px); /*width:33.333%*/
+
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container flex-container">
+      <!-- .item.item$*6>{item$} -->
+      <div class="item item1">item1</div>
+      <div class="item item2">item2</div>
+      <div class="item item3">item3</div>
+      <div class="item item4">item4</div>
+      <div class="item item5">item5</div>
+      <div class="item item6">item6</div>
+
+    </div>
+    1. flex container 선언 -flex container <br>
+    2. flex item의 방향 결정 -flex container<br>
+    3. flex item 확장수축크기 결정 -flex item<br>
+    4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단 -flex container<br>
+    5. flex container를 부모요소 내 정렬 판단 - 일반적은 블록레벨의 정렬<br>
+    6. flex item 정렬 판단(정렬은 container > item합)<br>
+       6-1 주축의 방향 -continaer내의 모든 아이템 -flex container<br>
+       6-2 교차 방향-continaer내의 모든 아이템 -flex container<br>
+       6-3 교차 방향 개별아이템 정렬 -flex item<br>
+  </div>
+  
+</body>
+</html>
