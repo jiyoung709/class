@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex4 - flex-grow활용</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrap{}
+    .header{
+      padding:1rem 0;    background-color: #ccc;
+    }
+    .header .logo{
+      width:100px;
+      height: 100px;
+      background-color: #ff6;
+    }
+    .header .gnb{
+      width: 200px;
+      background-color: #f6f;
+      padding:0.5rem 0;
+      
+    }
+    .header .toparea-stat{
+      width: 150px;padding:0.5rem 0;
+      background-color: #6ff;
+    }
+   /* flex관련 선언 */
+   /* 
+   1,2,3 item의 크기는 본인크기 유지
+   아이템 균등배포
+   수직  가운데( 주축-> 수평 교차축->수직)
+   교차축 align-items(1줄) / align-content  (2줄이상)
+
+   */
+    .flex-container{
+      display: flex;
+      /* flex-direction: row; */
+      /* flex-wrap: nowrap; */
+      justify-content: space-between;
+      /* align-item:strech 일때는 아이템은 containr 크기만큼 늘어나요 */
+      align-items: center;
+
+    }
+    .item{
+      flex:none;
+      /*
+      flex-grow: 0; 주축 여유공간 확장
+      flex-shrink:0 ;주축 여유공간 부족 수축
+      flex-basis: auto;
+      */
+    }
+    .item.gnb{
+     flex-grow: 1; 
+     margin-left:50px;
+     margin-right:50px;
+     
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header class="header flex-container">
+      <h1 class="logo item">logo</h1>
+      <nav class="gnb item">네비게이션</nav>
+      <div class="toparea-stat item">기능메뉴</div>
+    </header>
+
+   
+    1. flex container 선언 -flex container <br>
+    2. flex item의 방향 결정 -flex container<br>
+    3. flex item 확장수축크기 결정 -flex item<br>
+    4. 만약에 flext item의 크기 총합이 flex container 크기보다 클 경우 wrap(줄바꿈) 판단 -flex container<br>
+    5. flex container를 부모요소 내 정렬 판단 - 일반적은 블록레벨의 정렬<br>
+    6. flex item 정렬 판단(정렬은 container > item합)<br>
+       6-1 주축의 방향 -continaer내의 모든 아이템 -flex container<br>
+       6-2 교차 방향-continaer내의 모든 아이템 -flex container<br>
+       6-3 교차 방향 개별아이템 정렬 -flex item<br>
+
+  </div>
+</body>
+</html>
