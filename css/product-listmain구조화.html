@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product-listmain 구조화</title>
+</head>
+<body>
+  <div>
+    <!-- .xans-prodcut-listmain -->
+    <div class="ec-base-product xans-prodcut-listmain">
+      <!-- ul.prdList.grid4>li>.prdList__item>.thumbnail+.description -->
+      <ul class="prdList grid4">
+        <li>
+          <div class="prdList__item">
+            <div class="thumbnail">
+              <a href=""><img src="" alt=""></a>
+              <div class="likeButton likePrd">
+                <button>
+                  <img src="" alt="" class="likePrdIcon">
+                  <strong>
+                    <span class="likeCount"></span>
+                  </strong>
+                </button>
+              </div>
+              <!--//.likeButton  -->
+              <div class="badge"><span></span></div>
+              <!--//badge -->
+              <div class="icon__box">
+                <span class="wish"></span>
+                <span class="cart"></span>
+                <span class="sale_box"></span>
+              </div>
+              <!--//.icon__box  -->
+
+            </div>
+            <!--//.thumbnail -->
+            <div class="description">
+              <div class="name">
+                <a href="">
+                  <span class="title">상품명</span>
+                    <span>니트가디건</span></a>
+              </div>
+              <!--//.name  -->
+              <!-- ul.sepc>li.xans-record-*3>{상품설명$} -->
+              <ul class="sepc">
+                <li class="xans-record-">상품설명1</li>
+                <li class="xans-record-">상품설명2</li>
+                <li class="xans-record-">상품설명3</li>
+              </ul>
+              <div class="icon">
+                <img src="" alt="" class="icon">
+              </div>
+              <!-- //.icon -->
+
+            </div>
+            <!--//.description  -->
+          </div>
+          <!-- //.prdList__item -->
+        </li>
+      </ul>
+    </div>
+    <!-- //.xans-prodcut-listmain -->
+  </div>
+</body>
+</html>
