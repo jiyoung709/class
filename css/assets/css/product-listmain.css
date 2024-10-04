@@ -66,17 +66,39 @@ body, code {
 1. 기존의 likeButton에 지정된 이미지 표시x
 -> .likeButton img{}
 2. 그자리에 Like 텍스트 표시
+  ->.likeButton:before
 3. like 텍스트 좋아요 누적 수 가 표시
 ->.likeButton strong{}
 */
+.ec-base-product .prdList .thumbnail .likeButton::before{
+  content: "Like";
+  font-size: 12px;
+  display: block;
+  line-height: 1;
+  
+}
 .ec-base-product .prdList .thumbnail .likeButton{
   border: 1px solid #00f;/*테삭*/
   position: absolute;/*기준요소 설정 필요*/
-  left:0px; top:0px;
+  left:5%; top:4%;
+  width: 40px; height: 40px;
+  /* like텍스트와 count 숫자 수평 수직 가운데 정렬 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
-.ec-base-product .prdList .thumbnail .likeButton button{}
+.ec-base-product .prdList .thumbnail .likeButton button{
+  background-color: transparent;/*버튼의 기본색상을 제거*/
+  border: none; /*button 요소가 가지고 있는 기본 테두리 제거*/
+}
 .ec-base-product .prdList .thumbnail .likeButton img{
   display: none;/*likeButton 기능 요구 1*/
 }
-.ec-base-product .prdList .thumbnail .likeButton strong{}
+.ec-base-product .prdList .thumbnail .likeButton strong{
+  display: block;
+  cursor: pointer;
+  font-weight: normal; /*strong 요소 기본 bold 제거*/
+}
 
