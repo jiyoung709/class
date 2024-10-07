@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>product-listmain 구조화</title>
+  <!-- <link rel="stylesheet" href="assets/css/product-listmain.css"> -->
+  <link rel="stylesheet" href="assets/css/product-listmain2.css">
+
+</head>
+<body>
+  <div>
+    <!-- .xans-prodcut-listmain -->
+    <div class="ec-base-product xans-prodcut-listmain">
+      <!-- ul.prdList.grid4>li>.prdList__item>.thumbnail+.description -->
+      <!-- 
+      단에 따라 grid2, grid3, grid4, grid5 제공
+      <ul class="prdList grid4"> 
+      적용 후 제거
+      -->
+      <ul class="prdList">
+        <li>
+          <div class="prdList__item">
+            <div class="thumbnail">
+              <a href=""><img src="assets/images/상품이미지.png" alt="상품명"></a>
+              <div class="likeButton likePrd">
+                <button>
+                  <!-- <img src="" alt="" class="likePrdIcon"> -->
+                  <img src="//img.echosting.cafe24.com/skin/admin_ko_KR/product/ico_likeit_on.png" class="likePrdIcon" product_no="23" category_no="1" icon_status="on" alt="좋아요 등록 후">
+                  <strong>
+                    <span class="likeCount">10</span>
+                  </strong>
+                </button>
+              </div>
+              <!--//.likeButton  -->
+              <div class="badge"><span></span></div>
+              <!--//badge -->
+              <div class="icon__box">
+                <span class="wish">
+                  <img src="/web/upload/icon_202201241816315200.png" class="icon_img ec-product-listwishicon" alt="관심상품 등록 전" productno="23" categoryno="1" icon_status="off" login_status="F" individual-set="F">
+                  wish
+                </span>
+                <span class="cart">
+                  <img src="/web/upload/icon_202201241812549900.png" onclick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(23,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart">
+                  cart
+                </span>
+                <span class="option">
+                  <a onclick="optionPreview(this,'listmain-1',23,'T')" "="">
+                    <img src="/web/upload/icon_202201241816160100.png" id="btn_preview_listmain-123" class="option_preview" alt="">
+                    option
+                  </a>
+                </span>
+                <!-- <span class="sale_box">10%</span> -->
+              </div>
+              <!--//.icon__box  -->
+              <div class="sale_box">10%</div>
+
+            </div>
+            <!--//.thumbnail -->
+            <div class="description">
+              <div class="name">
+                <a href="">
+                  <span class="title" style="display: none;">상품명</span>
+                    <span style="font-size:18px;color:#111111;">니트가디건</span></a>
+              </div>
+              <!--//.name  -->
+              <!-- ul.sepc>li.xans-record-*3>{상품설명$} -->
+              <ul class="spec">
+                <li class="xans-record-">상품설명1</li>
+                <li class="xans-record-">상품설명2</li>
+                <li class="xans-record-">상품설명3</li>
+                <li class="xans-record-">상품설명1</li>
+                <li class="xans-record-">상품설명2</li>
+                <li class="xans-record-">상품설명3</li>
+              </ul>
+              <div class="icon">
+                <img src="" alt="" class="icon">
+              </div>
+              <!-- //.icon -->
+
+            </div>
+            <!--//.description  -->
+          </div>
+          <!-- //.prdList__item -->
+        </li>
+        <li>
+          <div class="prdList__item">
+            <div class="thumbnail">
+              <a href=""><img src="assets/images/상품이미지.png" alt="상품명"></a>
+              <div class="likeButton likePrd">
+                <button>
+                  <!-- <img src="" alt="" class="likePrdIcon"> -->
+                  <img src="//img.echosting.cafe24.com/skin/admin_ko_KR/product/ico_likeit_on.png" class="likePrdIcon" product_no="23" category_no="1" icon_status="on" alt="좋아요 등록 후">
+                  <strong>
+                    <span class="likeCount"></span>
+                  </strong>
+                </button>
+              </div>
+              <!--//.likeButton  -->
+              <div class="badge"><span></span></div>
+              <!--//badge -->
+              <div class="icon__box">
+                <span class="wish">
+                  <img src="/web/upload/icon_202201241816315200.png" class="icon_img ec-product-listwishicon" alt="관심상품 등록 전" productno="23" categoryno="1" icon_status="off" login_status="F" individual-set="F">
+                </span>
+                <span class="cart">
+                  <img src="/web/upload/icon_202201241812549900.png" onclick="CAPP_SHOP_NEW_PRODUCT_OPTIONSELECT.selectOptionCommon(23,  1, 'basket', '')" alt="장바구니 담기" class="ec-admin-icon cart">
+                </span>
+                <span class="option">
+                  <a onclick="optionPreview(this,'listmain-1',23,'T')" "="">
+                    <img src="/web/upload/icon_202201241816160100.png" id="btn_preview_listmain-123" class="option_preview" alt="">
+                  </a>
+                </span>
+                <!-- <span class="sale_box">10%</span> -->
+              </div>
+              <!--//.icon__box  -->
+              <div class="sale_box">10%</div>
+
+            </div>
+            <!--//.thumbnail -->
+            <div class="description">
+              <div class="name">
+                <a href="">
+                  <span class="title">상품명</span>
+                    <span style="font-size:18px;color:#111111;">니트가디건</span></a>
+              </div>
+              <!--//.name  -->
+              <!-- ul.sepc>li.xans-record-*3>{상품설명$} -->
+              <ul class="sepc">
+                <li class="xans-record-">상품설명1</li>
+                <li class="xans-record-">상품설명2</li>
+                <li class="xans-record-">상품설명3</li>
+              </ul>
+              <div class="icon">
+                <img src="" alt="" class="icon">
+              </div>
+              <!-- //.icon -->
+
+            </div>
+            <!--//.description  -->
+          </div>
+          <!-- //.prdList__item -->
+        </li>
+      </ul>
+    </div>
+    <!-- //.xans-prodcut-listmain -->
+  </div>
+  <img src="assets/images/product-listmain.png" alt="">
+</body>
+</html>
