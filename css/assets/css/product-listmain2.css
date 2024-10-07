@@ -17,14 +17,9 @@ body, code {
 }
 
 /* product-listmain */
-
-/* html 구조
-<div class="ec-base-product xans-prodcut-listmain">
-  <ul class="prdList grid4"> 
-  <li>
-    <div class="prdList__item">
-      <div class="thumbnail">
-*/
+/* 컴온셀렉트 - > 
+  1 뷰티 bestitem + 
+  2 마일드 hover시 box-shadow 표시 */
 .ec-base-product{}
 .ec-base-product .prdList{
   /* li를   display: inline-block;  생기는 여백을 없애기위해*/
@@ -38,6 +33,7 @@ body, code {
   /* .ec-base-product .prdList 생기는 여백을 없애기위해 글자크기 글자높이 0 원상복구 */
   font-size:13px;
   line-height: 1;
+   overflow: hidden;
 }
 
 /* 메인분류 상품목록 단 처리 */
@@ -47,14 +43,22 @@ body, code {
 .ec-base-product .prdList.grid5 li{width: 20%;}
 
 .ec-base-product .prdList .prdList__item{
-  margin:0 10px;
+  margin:10px; /*box-shadow 표시*/
+  position: relative; /*.description 기준요소*/
 }
+
+/* mouseover(hover) 시 box-shadow */
 .ec-base-product .prdList .thumbnail{
   border: 1px solid #f00;/*테 삭*/
   /*.ec-base-product .prdList .thumbnail .likeButton
    position: absolute;기준요소 가 되기 위해서
   */
   position: relative; 
+}
+
+/* 상품에 오버시  mouseover(hover) 시  .thumbnail box-shadow */
+.ec-base-product .prdList .prdList__item:hover .thumbnail{
+   box-shadow: 0px 0px 8px rgba(0,0,0,0.5);
 }
 .ec-base-product .prdList .thumbnail>a{
   display: block;   
@@ -110,21 +114,32 @@ body, code {
 
 
 /* .icon__box  */
+/* 뷰티 best item
+->관리자 설정과 상관없이 .icon__box 표시x
+화면표시 x  1스크린리더x 2,3 스크린리더0
+1 display:none;
+2 opacity:0;
+3 visibility:hidden;
+ */
   .ec-base-product .prdList .icon__box {
+   
     border: 1px solid #0f0;
     position: absolute;/*기준요소 확인  .ec-base-product .prdList .thumbnail*/
     left:0; 
     top:50%;
     transform: translate(0, -50%);/* absolute 수직 가운데 넣는 방법*/
     display: flex;
+    /* display: none; */
     flex-direction: row;/*생략가능*/
     justify-content: center;
     width: 100%;
     opacity: 0;
+    visibility: hidden;
   }
   /* .ec-base-product .prdList .icon__box:hover { */
   .ec-base-product .prdList .prdList__item:hover .icon__box {
     opacity: 1;
+    /* opacity: 0; */
   }
   .ec-base-product .prdList .icon__box >span {
     box-sizing: border-box;
@@ -172,10 +187,30 @@ body, code {
 
 
   /* .description */
+  /* ->.description 아래에서 위로 자연스럽게 표시 
+  
+   .description .thumbnail 하단에 겹쳐서 표시
+  */
+
  .ec-base-product .prdList .description{
     margin-top:20px;
     font-size: 12px;
     line-height: 18px;
+    /* 여기서부터 수정 내용 추가 */
+    position: absolute;
+    left:0; bottom:0; top:auto;
+    transform: translate(0, 100%);
+    width: 100%;
+    padding:5% 5% 3% 5%;
+    background-color: rgba(255,255,255,0.5);
+    box-sizing: border-box;
+    border: 1px solid #00f;
+    transition: transform 0.1s;
+ }
+ /* .description 위치변경 */
+ .ec-base-product .prdList .prdList__item:hover  .description{
+    transform: translate(0 , 0);
+    transition: transform 0.3s;
  }
 
  /* 상품명은 inline style을 무시하고 반드시 빨강 15p 관리자화면 설정 무시 */
