@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>미디어 쿼리 media query</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .section{
+      min-height: 30vh;
+      border: 1px solid #000;
+      background-color: #ff6;
+    }
+    .section .title{
+      font-size: 2rem;
+      color: #f00;
+      font-weight: bold;
+    }
+
+    /* 
+    screen 장비타입 
+    max-width:991px 장비특징 
+      뷰포트의 크기가 최대 991이넘지 않는
+      (뷰포트 991이하)
+    */
+    @media screen and (max-width:991px){
+       .section{
+        background-color: #6ff;
+       }
+      .section .title{
+         font-size: 1.2rem;
+         color: #00f;
+       }
+    } /* @media screen and (max-width:991px){*/
+
+    @media screen and (max-width:575px){
+      h1{display: none;}
+      .section{
+        min-height: 100vh;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <h1>미디어쿼리</h1>
+  <!-- div.section*3>p.title>{section$} -->
+  <div class="section">
+    <p class="title">section1</p>
+  </div>
+  <div class="section">
+    <p class="title">section2</p>
+  </div>
+  <div class="section">
+    <p class="title">section3</p>
+  </div>
+</body>
+</html>
