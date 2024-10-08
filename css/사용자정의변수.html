@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>사용자 정의 변수</title>
+  <style>
+
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    html{
+      --bg-color-xlg:#ff6;
+      --bg-color-m:#6ff;
+      --page-title:#f00;
+      --border-color:#333;
+      --section-height-xlg:50vh;
+      --section-height-m:100vh;
+    }
+    .section{
+      min-height: var(--section-height-xlg);
+      border: 1px solid var(--border-color);
+      background-color: var(--bg-color-xlg);
+    }
+    .section .title{
+      font-size: 2rem;
+      color: var(--page-title);
+      font-weight: bold;
+    }
+
+    @media screen and (max-width:991px){
+       .section{
+        background-color: var(--bg-color-lg, #f6f);
+       }
+      .section .title{
+         font-size: 1.2rem;
+         color: #00f;
+       }
+    } /* @media screen and (max-width:991px){*/
+
+    @media screen and (max-width:575px){
+      h1{display: none;}
+      .section{
+        min-height: 100vh;
+      }
+
+    }
+  </style>
+</head>
+<body>
+  <h1>미디어쿼리</h1>
+  <!-- div.section*3>p.title>{section$} -->
+  <div class="section">
+    <p class="title">section1</p>
+  </div>
+  <div class="section">
+    <p class="title">section2</p>
+  </div>
+  <div class="section">
+    <p class="title">section3</p>
+  </div>
+</body>
+</html>
