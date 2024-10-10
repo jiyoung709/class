@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>그리드 기본2</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body{
+      --grid-item--bg:#6ff;
+    }
+    .wrap{margin:20px}
+    .container{
+      background-color: #ff6;
+      border: 4px solid #ccc;
+    }
+    /* grid */
+    .grid-container{
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      grid-template-rows: 100px minmax(400px, auto) 100px;
+      grid-template-areas: 
+        "header header "   /*1row*/
+        "side content "    /*2row*/
+        "footer footer "   /*3row*/
+      ;
+      gap:4px;
+    }
+
+    /* grid-item */
+    .header{ 
+      grid-area: header;
+      background-color: var(--grid-item--bg);}
+    .lnb{
+      grid-area: side;
+      background-color: var(--grid-item--bg);}
+    .content{
+      grid-area: content;
+      background-color: var(--grid-item--bg);}
+    .footer{
+      grid-area: footer;
+      background-color: var(--grid-item--bg);}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container grid-container">
+      <header class="header">header</header>
+      <aside class="lnb">side</aside>
+      <main class="content">content</main>
+      <footer class="footer">footer</footer>
+    </div>
+  </div>
+</body>
+</html>
