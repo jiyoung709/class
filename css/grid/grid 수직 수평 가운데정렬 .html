@@ -11,23 +11,50 @@
       height: 100vh;
       background-color: #ccc;
       display: grid;
-      grid-template-columns: 50%;
+      grid-template-columns:minmax(320px, 50%);
+      grid-template-rows: auto;
+      justify-content: center;
+      align-content: center;
+    }
+    .wrap .box{
+      border: 10px solid dodgerblue;
+      background-color: #ff6;
+      aspect-ratio: 16/9;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .box .thumbnail img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+    }
+    .box .txt-title{
+      display: grid;
+      justify-items: center;
+      align-items: center;
+    }
+    .box .txt-title p{
+      background-color: #f6f;
+      padding: 0 2rem;
+      border-radius: 10px;
+      font-size: 35px;
+      line-height: 1.5;
+      text-transform: uppercase;
     }
 
-    .box{
-      border: 10px solid dodgerblue;
-      width: 50%;
-      aspect-ratio: 16/9;
-      
-    }
+
 
   </style>
 </head>
 <body>
    <div class="wrap">
      <div class="box">
+      <div class="thumbnail">
+        <img src="../assets/images/상품이미지.png" alt="">
+      </div>
       <div class="txt-title">
-        open event
+        <p>open event</p>
       </div>
      </div>
    </div>
