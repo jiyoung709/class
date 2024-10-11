@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+/* NanumSquare Neo Import */
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 300;
+  font-style: normal;
+  src: url('/font/NanumSquareNeo-aLt.eot');
+  src: url('/font/NanumSquareNeo-aLt.eot?#iefix') format('embedded-opentype'),
+    url('/font/NanumSquareNeo-aLt.woff') format('woff'),
+    url('/font/NanumSquareNeo-aLt.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 400;
+  font-style: normal;
+  src: url('/font/NanumSquareNeo-bRg.eot');
+  src: url('/font/NanumSquareNeo-bRg.eot?#iefix') format('embedded-opentype'),
+    url('/font/NanumSquareNeo-bRg.woff') format('woff'),
+    url('/font/NanumSquareNeo-bRg.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 700;
+  font-style: normal;
+  src: url('/font/NanumSquareNeo-cBd.eot');
+  src: url('/font/NanumSquareNeo-cBd.eot?#iefix') format('embedded-opentype'),
+    url('/font/NanumSquareNeo-cBd.woff') format('woff'),
+    url('/font/NanumSquareNeo-cBd.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 800;
+  font-style: normal;
+  src: url('/font/NanumSquareNeo-dEb.eot');
+  src: url('/font/NanumSquareNeo-dEb.eot?#iefix') format('embedded-opentype'),
+    url('/font/NanumSquareNeo-dEb.woff') format('woff'),
+    url('/font/NanumSquareNeo-dEb.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-weight: 900;
+  font-style: normal;
+  src: url('/font/NanumSquareNeo-eHv.eot');
+  src: url('/font/NanumSquareNeo-eHv.eot?#iefix') format('embedded-opentype'),
+    url('/font/NanumSquareNeo-eHv.woff') format('woff'),
+    url('/font/NanumSquareNeo-eHv.ttf') format('truetype');
+}
