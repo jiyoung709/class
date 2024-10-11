@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 정렬 content</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrap{margin:20px;}
+    .container{
+      background-color: #ff6;
+      border: 10px solid #ccc;
+    }
+    .item{
+      background-color: dodgerblue;
+      text-align: center;
+    }
+
+    /* grid */
+    
+
+    /* 
+    1-6 grid-container
+    7 item
+    8    grid-container,  item
+    
+    1. 그리드 선언
+    2. 행 수/크기 열 수/크기
+    3. 만약 행 or 열  2번 지정한 행/열 수를 초과 있다면
+        초과된 행 or 열 크기
+    4. 그리드 영역의 이름 템플릿 결정    
+    5. 그리드 아이템이 들어는 순서 흐름 결정    
+    6. r그리드 셀과 셀 사이에 여백 결정
+    7. 그리드 아이템 배치
+    8. 정렬 */
+
+    .grid-container{
+      display: grid;/*1*/
+   
+      /* grid-auto-flow: row;  5*/
+      gap:4px; /*6*/
+      /* 그리드 컨테이너 안에서 모든 그리드아이템의 정렬 */
+      /* 정렬이 전제 조건은 정렬된 요소를 포함하는 요소의 크기가 정렬된 요소의합의 크기보다 커야 정렬 실행 */
+      grid-template-columns: repeat(4, 100px);/*2*/
+      /* justify-content: normal; */
+      /* justify-content: start; *//*col 크기 고정크기*/ 
+      justify-content: space-evenly;
+
+   
+    }
+
+
+   /* align-content  */
+   /* 
+     포함하는 요소  크기 > 정렬의 요소 크기 합
+   */
+    .container{
+      min-height: 350px;
+    }
+    .grid-container{
+     /* grid-template-rows: repeat(3, 80px); 2*/
+    /* grid-auto-rows: minmax(70px , auto);3*/
+   
+   /* align-content: normal; */
+   /* align-content: start; 크기 고정 크기*/
+    /*align-content: stretch; row 크기 고정값 start*/
+      /* 정렬 요소를 포함하는  요소에 꽉 차 할 때 */
+      grid-template-rows: repeat(3, auto);
+      /* align-content: normal;
+      align-content: stretch; */
+      align-content: stretch; /*해당 크기 auto 값일때*/
+    }
+
+    .item:nth-child(1),
+    .item:nth-child(5){
+      grid-column:span 2;
+
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container grid-container">
+       <div class="item">1</div>
+       <div class="item">2</div>
+       <div class="item">3</div>
+       <div class="item">4</div>
+       <div class="item">5</div>
+       <div class="item">6</div>
+       <div class="item">7</div>
+    </div>
+  </div>
+  1. 그리드 선언 <br>
+    2. 행 수/크기 열 수/크기 <br>
+    3. 만약 행 or 열  2번 지정한 행/열 수를 초과 있다면 <br>
+        초과된 행 or 열 크기 <br>
+    4. 그리드 영역의 이름 템플릿 결정     <br>
+    5. 그리드 아이템이 들어는 순서 결정   <br>  
+    6. r그리드 셀과 셀 사이에 여백 결정 <br>
+    7. 그리드 아이템 배치 <br>
+    8. 정렬
+</body>
+</html>

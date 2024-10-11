@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>grid 정렬 items</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .wrap{margin:20px;}
+    .container{
+      background-color: #ff6;
+      border: 10px solid #ccc;
+    }
+    .item{
+      background-color: dodgerblue;
+      text-align: center;
+    }
+
+    .grid-container{
+      display: grid;
+      gap:4px; 
+    }
+
+    /* justify-items  */
+    /* 
+      inline 축 정렬
+      정렬의 요소를 컨테이너 -> 그리드 영역
+      그리드 영역내에서 수평 정렬
+
+     기본값  normal  |
+     정렬  start | center  | end  |
+     배포  stretch 
+
+     확인포인트
+     normal -> strech
+    */
+    .grid-container{
+      grid-template-columns: repeat(4, 100px);
+      /* justify-content: start;  그리드 컨테이너 안에서 정렬 */
+      justify-items: stretch; /*그리드 영역안에서*/
+    }
+
+    /* align-items */
+      /* 
+      block 축 정렬(수직)
+      정렬의 요소를 컨테이너 -> 그리드 영역
+      그리드 영역내에서 수직 정렬
+
+     기본값  normal  |
+     정렬  start | center  | end  |
+     배포  stretch 
+
+     확인포인트
+     normal -> strech
+    */
+    .container{
+      min-height: 350px;
+    }
+    .grid-container{
+      grid-template-rows: repeat(3, 80px);
+      /* align-content: normal; ->그리드 컨테이너 안에서 정렬 */
+       align-items: stretch; /*그리드 영역안에서*/
+    }
+
+
+
+    .item:nth-child(1),
+    .item:nth-child(5){
+      grid-column:span 2;
+
+    }
+ 
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="container grid-container">
+       <div class="item">1</div>
+       <div class="item">2</div>
+       <div class="item">3</div>
+       <div class="item">4</div>
+       <div class="item">5</div>
+       <div class="item">6</div>
+       <div class="item">7</div>
+    </div>
+  </div>
+  1. 그리드 선언 <br>
+    2. 행 수/크기 열 수/크기 <br>
+    3. 만약 행 or 열  2번 지정한 행/열 수를 초과 있다면 <br>
+        초과된 행 or 열 크기 <br>
+    4. 그리드 영역의 이름 템플릿 결정     <br>
+    5. 그리드 아이템이 들어는 순서 결정   <br>  
+    6. r그리드 셀과 셀 사이에 여백 결정 <br>
+    7. 그리드 아이템 배치 <br>
+    8. 정렬
+</body>
+</html>
