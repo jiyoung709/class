@@ -49,29 +49,23 @@
   order:1;
   grid-column: 1/3;
   grid-row: 1/4;
-  background-color: #f00; /*삭제*/
 }
 .navercorp.main .cont-summary .cont__area.type-b .story{
   order:2;
   grid-column: 3/5; 
   grid-row: 1/2;
-  background-color: #00f ;/*삭제*/
 }
 .navercorp.main .cont-summary .cont__area.type-b .ad{
   order:3;
-  background-color: #0f0;/*삭제*/
 }
 .navercorp.main .cont-summary .cont__area.type-b .recruit{
   order:5;
-  background-color: #ff6;/*삭제*/
 }
 .navercorp.main .cont-summary .cont__area.type-b .stock{
   order:6;
-  background-color: #6ff;/*삭제*/
 }
 .navercorp.main .cont-summary .cont__area.type-b .ir{
   order:4;
-  background-color: #f6f;/*삭제*/
 }
 
 .navercorp.main .cont__link{
@@ -86,10 +80,7 @@
   color: #fff;
 }
 
-.navercorp.main .cont-summary .news .cont__link{
-  padding:0;
-  transition: all 0.3s;
-}
+
 .navercorp.main .cont-summary .thumb-box{
   overflow: hidden;
   position: absolute;
@@ -163,6 +154,53 @@
   background-size: contain;
 }
 
+.navercorp.main .cont-summary .news .cont__link{
+  padding:0;
+  transition: all 0.3s;
+}
+
+.navercorp.main .cont-summary .news .cont__link:hover{
+  color:#ff5f00;
+}
+.navercorp.main .cont-summary .news .thumb-box{
+  position: relative;
+  height: 479px;
+}
+
+.navercorp.main .cont-summary .news .text-box{
+  flex:1;
+  padding: 16px 40px 16px 16px;
+  background-color: var(--newslistBg);
+}
+
+.navercorp.main .cont-summary .news .title{
+  /* 여러줄 말줄임 ... 표시시작 */
+  display: block;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  /* 여러줄 말줄임 ... 표시끝 */
+  margin-top: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: -1px;
+}
+.navercorp.main .cont-summary .news .date{
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+  color:#86868b;
+}
+
+.navercorp.main .cont-summary .cont__item.news:hover .outlink::after{
+  background: url(../img/common/ic-outlink-circle-black-hover.png) no-repeat center;
+  background-size: contain;
+}
+
 
 
 
@@ -181,14 +219,8 @@
 }
 .navercorp.main .cont-summary .cont__item{}
 
-.navercorp.main .cont-summary .stock{
-  background-color: #ff9;  /* 테스트후 삭제 */
-  width:400px;  /* 테스트후 삭제 */
-  margin:20px auto;  /* 테스트후 삭제 */
-  aspect-ratio: 4/3; /* 테스트후 삭제 */
-}
+
 .navercorp.main .cont-summary .stock a.cont__link{
-  background-color: #9ff;/* 테스트후 삭제 */
   padding:16px;
   color:#1d1d1d;
    display: flex;
@@ -205,7 +237,6 @@
   letter-spacing: -0.3px;
 }
 .navercorp.main .cont-summary .stock div.text-wrap{
-  border: 1px solid #000;/* 테스트후 삭제 */
 
 }
 .navercorp.main .cont-summary .stock .num-info{
@@ -274,6 +305,19 @@
 .navercorp.main .cont-summary .news .thumb-box{
   height: 59.213%;
 }
+.navercorp.main .cont-summary .cont__item .head{
+   font-size: 10px;
+   line-height: 16px;
+   letter-spacing: -0.01px
+}
+.navercorp.main .cont-summary .cont__item .title {
+  font-size: 16px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
+}
+.navercorp.main .cont-summary .cont__item .outlink{
+  right: 12px; bottom: 14px;
+}
 
    
 }
@@ -311,6 +355,17 @@
 }
 .navercorp.main .cont-summary .news .thumb-box{
   height: 63.434%;
+}
+.navercorp.main .cont-summary .cont__item .head{
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: normal;
+}
+.navercorp.main .cont-summary .cont__item .title {
+  font-size: 20px;
+}
+.navercorp.main .cont-summary .cont__item .outlink{
+  right: 16px; bottom: 16px;
 }
 }
 /*@media (max-width:1023px)*/
@@ -350,6 +405,13 @@
 .navercorp.main .cont-summary .news .thumb-box{
   height: 64.434vw;
 }
+.navercorp.main .cont-summary .cont__item .title {
+  font-size: 16px;
+}
+.navercorp.main .cont-summary .cont__item .outlink{
+  display: none;
+}
+
 }
 /*@media (max-width:767px)*/
 
