@@ -74,6 +74,98 @@
   background-color: #f6f;/*삭제*/
 }
 
+.navercorp.main .cont__link{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.navercorp.main .cont-summary .cont__link{
+  padding: 16px 40px 16px 16px;
+  justify-content: space-between;
+  color: #fff;
+}
+
+.navercorp.main .cont-summary .news .cont__link{
+  padding:0;
+  transition: all 0.3s;
+}
+.navercorp.main .cont-summary .thumb-box{
+  overflow: hidden;
+  position: absolute;
+  left:0; top:0;
+  width: 100%; height: 100%;
+}
+.navercorp.main .cont-summary .thumb-box .thumbnail{
+  width: 100%; height: 100%;
+  background: no-repeat center;
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.navercorp.main .cont-summary .cont__item:hover .thumb-box .thumbnail{
+  transform: scale(1.05);
+}
+.navercorp.main .cont-summary .news .thumb-box .thumbnail{
+  background-image: url(../img/사진_8일_경기도_성남시에_위치한_네이버_1784를_방문한_파이살_빈_아야.jpg);
+}
+.navercorp.main .cont-summary .story .thumb-box .thumbnail{
+  background-image: url(../img/공통_썸네일-이미지-.png);
+}
+.navercorp.main .cont-summary .ad .thumb-box .thumbnail{
+  background-image: url(../img/CHZZK_low.gif);
+}
+
+.navercorp.main .cont-summary .news .thumb-box{
+  height: 470px;
+  position: relative;
+}
+
+.navercorp.main .cont-summary .cont__item .text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.navercorp.main .cont-summary .cont__item .text-wrap{
+  z-index:10;
+}
+
+.navercorp.main .cont-summary .cont__item .head, 
+.navercorp.main .cont-summary .cont__item .category, 
+.navercorp.main .cont-summary .cont__item .title {
+  display: block;
+}
+
+.navercorp.main .cont-summary .cont__item .head, 
+.navercorp.main .cont-summary .cont__item .category{
+  z-index: 10;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: -0.3px;
+}
+.navercorp.main .cont-summary .cont__item .title {
+  z-index: 10;
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 34px;
+  letter-spacing: -0.6px;
+}
+.navercorp.main .cont-summary .cont__item .outlink{
+  position: absolute;
+  right: 16px; bottom: 16px;
+  transition: all 0.3s;
+}
+.navercorp.main .cont-summary .cont__item .outlink::after{
+  content: "";
+  display: block;
+  width: 24px; height: 24px;
+  background: var(--ic-outlink-circle) no-repeat center;
+  background-size: contain;
+}
+
+
+
+
 
 
 
@@ -140,7 +232,9 @@
 @media (max-width:1919px){
   .navercorp.main .cont-summary .cont__area.type-b .cont__list{
     grid-template-rows: 334px 155px 155px;
- 
+  }
+  .navercorp.main .cont-summary .news .thumb-box{
+    height: 403px;
   }
 }
 /*@media (max-width:1919px)*/
@@ -171,6 +265,16 @@
 .navercorp.main .cont-summary .cont__area.type-b .story{
   padding-top:54.432%;
 }
+.navercorp.main .cont-summary .cont__link{
+  position: absolute;
+  top:0; left:0;
+  width: 100%; height: 100%;
+  padding: 12px 40px 12px 12px;
+}
+.navercorp.main .cont-summary .news .thumb-box{
+  height: 59.213%;
+}
+
    
 }
 /*@media (max-width:1599px)*/
@@ -200,6 +304,13 @@
   grid-column: 1/3;
   grid-row: 2/3;
   padding-top:54.52%;
+}
+
+.navercorp.main .cont-summary .cont__link{
+  padding: 16px 40px 20px 16px;
+}
+.navercorp.main .cont-summary .news .thumb-box{
+  height: 63.434%;
 }
 }
 /*@media (max-width:1023px)*/
@@ -232,6 +343,12 @@
 }
 .navercorp.main .cont-summary .cont__area.type-b .ir{
   order:5;
+}
+.navercorp.main .cont-summary .cont__link{
+  padding: 16px 40px 20px 16px;
+}
+.navercorp.main .cont-summary .news .thumb-box{
+  height: 64.434vw;
 }
 }
 /*@media (max-width:767px)*/
