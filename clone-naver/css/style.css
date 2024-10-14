@@ -4,8 +4,38 @@
 @import url(variables.css);
 @import url(common.css);
 
+/* .main-content */
+.container{
+  padding-top: 70px;
+  padding-bottom: 160px;
+}
+.navercorp.main .main-content{}
+.navercorp.main .main-content__inner {
+  display: flex;
+  position: relative;
+  max-width: 1600px;
+}
+.navercorp.main .cont__area{
+  flex:1;
+}
+.navercorp.main .cont__list{
+}
 
-/* cont__summary */
+.navercorp.main .cont-summary .cont__list{
+   display: grid;
+   gap:20px;
+   grid-template-rows: 505px 155px;
+   grid-template-columns: 40.068% 1fr 1fr;
+}
+
+.navercorp.main .cont-summary .cont__area.type-b .cont__list{
+  grid-template-rows: 394px 187px 187px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+
+/* .cont__summary */
 
 
 /* cont__item */
@@ -62,3 +92,57 @@
 .navercorp.main .cont-summary .stock .num-info .num{}
 .navercorp.main .cont-summary .stock .num-info .percent{}
 .navercorp.main .cont-summary .stock .count{}
+
+
+@media (max-width:1919px){
+  .navercorp.main .cont-summary .cont__area.type-b .cont__list{
+    grid-template-rows: 334px 155px 155px;
+ 
+  }
+}
+/*@media (max-width:1919px)*/
+
+@media (max-width:1599px){
+  .container{
+    padding-bottom: 140px;
+  }
+  .navercorp.main .main-content__inner{
+    max-width: none;
+    flex-direction: column;
+  }
+  .navercorp.main .cont__area{
+    margin-top:24px
+  }
+  .navercorp.main .cont-summary .cont__list{
+    gap:16px;
+    grid-template-rows: unset;
+    grid-template-columns: 40.171% 1fr 1fr;
+ }
+ .navercorp.main .cont-summary .cont__area.type-b .cont__list{
+  grid-template-rows: unset;
+}
+   
+}
+/*@media (max-width:1599px)*/
+
+@media (max-width:1023px){
+  .navercorp.main .cont-summary .cont__list{
+    gap:12px;
+    grid-template-columns: 1fr 1fr;
+ }
+ .navercorp.main .cont-summary .cont__area.type-b .cont__list{
+  grid-template-columns: repeat(2, 1fr);
+}
+}
+/*@media (max-width:1023px)*/
+
+@media (max-width:767px){
+  .navercorp.main .cont-summary .cont__list{
+    gap:12px 7px;
+ }
+}
+/*@media (max-width:767px)*/
+
+@media (max-width:375px){
+}
+/*@media (max-width:375px)*/
