@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>가상선택자 after before의 활용</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .box{
+      margin-bottom: 20px;
+      margin-left: 20px;
+    }
+    .example{
+      padding:2rem;
+      background-color: #ccc;
+      font-size: 1.5rem;
+      text-transform: capitalize;
+    }
+   
+    .example1 .txt{
+      background-color: #eee;
+      position: relative;
+      z-index:10;
+    }
+    .example1 .txt::after{
+      content: "";
+      display: block;
+      width:100px;
+      height: 2px;
+      background-color: #f00;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index:-1;
+
+    }
+  
+    /* .example1 .txt::after{
+      content: "";
+      display: block;
+      width:100px;
+      height: 20px;
+      background-color: #f00;
+
+    } */
+  </style>
+</head>
+<body>
+  <h1>:after :before 선택자 활용</h1>
+  <h2>밑줄</h2>
+  <div class="box example example1">
+    <p class="txt">title1</p>
+  </div>
+
+  <h2>블릿</h2>
+  <div class="box example example2">
+    <p class="txt">title2</p>
+  </div>
+
+  <h2>형광펜</h2>
+  <div class="box example example3">
+    <p class="txt">title3</p>
+  </div>
+
+</body>
+</html>
