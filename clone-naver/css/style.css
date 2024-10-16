@@ -315,6 +315,10 @@
  .navercorp.main .cont-summary .cont__area.type-b .cont__list{
   grid-template-rows: unset;
 }
+.navercorp.main .cont-summary .cont__area.type-b .cont__item {
+  padding-top: 52.84%;
+}
+
 .navercorp.main .cont-summary .cont__area.type-b .news{
   padding-top: unset;
 }
@@ -322,6 +326,7 @@
 .navercorp.main .cont-summary .cont__area.type-b .story{
   padding-top:54.432%;
 }
+
 .navercorp.main .cont-summary .cont__link{
   position: absolute;
   top:0; left:0;
