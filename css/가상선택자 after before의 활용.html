@@ -18,48 +18,126 @@
     }
    
     .example1 .txt{
+      display: inline-block;
+      /* padding:0.5rem 0rem; */
+      line-height: 50px;
       background-color: #eee;
       position: relative;
       z-index:10;
+      /* text-decoration: underline; */
     }
     .example1 .txt::after{
       content: "";
       display: block;
-      width:100px;
+      width:0%;
       height: 2px;
-      background-color: #f00;
+      background-color: #00f;
       position: absolute;
       bottom: 0;
       left: 0;
       z-index:-1;
-
+      transition: all 0.3s;
     }
-  
-    /* .example1 .txt::after{
+    .example1:hover .txt::after {
+      width: 100%;
+      background-color: #f00;
+    }
+
+    .example2{
+      background: transparent;
+    }
+
+    .example2 .txt{
+      display: block;
+      padding:1rem 0rem;
+      line-height: 50px;
+      position: relative;
+      z-index:10;
+      text-align: center;
+      margin-bottom:50px;
+    }
+    .example2 .txt::after{
       content: "";
       display: block;
-      width:100px;
-      height: 20px;
-      background-color: #f00;
+      width:3rem;
+      height: 4px;
+      background-color: gold;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%, 0);
+      z-index:-1;
+    }
 
-    } */
+    .example3 .txt{
+      display: inline-block;
+      padding-left:10px;
+      padding-right:10px;
+      position: relative;
+      z-index:10;
+    }
+    .example3 .txt::after{
+      content: "";
+      display: block;
+      width:100%;
+      height: 40%;
+      background-color: yellow;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index:-1;
+    }
+
+    .example4{
+      margin-bottom:500px;
+    }
+    .example4 .txt{
+      padding-left:30px;
+      line-height: 40px;
+      position: relative;
+      z-index:10;
+    }
+    .example4 .txt::before{
+      content: "";
+      display: inline-block;
+      position: absolute;
+      left: 0; bottom: 0;
+      transform: translate(0, -50%);
+      z-index:-1;
+      width:20px;
+      height:20px;
+      /* background-color: yellow; */
+      background-image: url(/clone-naver/img/common/ic-outlink-circle.png);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+     
+    }
   </style>
 </head>
 <body>
   <h1>:after :before 선택자 활용</h1>
   <h2>밑줄</h2>
   <div class="box example example1">
-    <p class="txt">title1</p>
+    <p class="txt">section title1</p>
   </div>
 
   <h2>블릿</h2>
   <div class="box example example2">
-    <p class="txt">title2</p>
+    <p class="txt">title text lorem 2</p>
+    <div class="desc">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eveniet error impedit in atque est exercitationem distinctio eum sequi magni minus quis aut, enim quas fugit architecto quaerat magnam beatae!
+    </div>
   </div>
 
   <h2>형광펜</h2>
   <div class="box example example3">
     <p class="txt">title3</p>
+  </div>
+
+  <h2> 블릿2</h2>
+  <div class="box example example4">
+    <p class="txt">title4</p>
   </div>
 
 </body>
