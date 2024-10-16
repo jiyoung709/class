@@ -269,6 +269,46 @@ letter-spacing: -1.5px;
 color:var(--default);
 }
 
+.navercorp.main .cont-summary .stock .num-info::after{
+  content: "";
+  position: absolute;
+  width: 32px; height: 36px;
+  right: 20px; bottom: 20px;
+  background: no-repeat center;
+  background-size: contain;
+}
+.navercorp.main .cont-summary .stock .num-info.up::after{
+  background-image: var(--ic-arrow-primary) ;
+}
+.navercorp.main .cont-summary .stock .num-info.down::after{
+  background-image: var(--ic-arrow-down-hover);
+}
+.navercorp.main .cont-summary .cont__item.stock:hover .num-info.up::after {
+  background-image: var(--ic-arrow-down-hover);
+  transform: rotate(180deg);
+}
+.navercorp.main .cont-summary .stock .num-info.down::after {
+  background-image: var(--ic-arrow-primary);
+  transform: rotate(180deg);
+}
+
+.navercorp.main .cont-summary .cont__item.stock .head,
+.navercorp.main .cont-summary .cont__item.stock .title,
+.navercorp.main .cont-summary .cont__item.stock .desc,
+.navercorp.main .cont-summary .cont__item.ir .head,
+.navercorp.main .cont-summary .cont__item.ir .title,
+.navercorp.main .cont-summary .cont__item.ir .desc {
+  color: var(--default);
+  transition: color .3s;
+}
+.navercorp.main .cont-summary .cont__item.stock:hover .head,
+.navercorp.main .cont-summary .cont__item.stock:hover .title,
+.navercorp.main .cont-summary .cont__item.stock:hover .desc,
+.navercorp.main .cont-summary .cont__item.ir:hover .head,
+.navercorp.main .cont-summary .cont__item.ir:hover .title,
+.navercorp.main .cont-summary .cont__item.ir:hover .desc {
+  color: #ff5f00;
+}
 
 @media (max-width:1919px){
   .navercorp.main .cont-summary .cont__area.type-b .cont__list{
