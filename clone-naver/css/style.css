@@ -213,35 +213,27 @@
   margin-top: 10px;
 }
 
-/* li.cont__item.ad */
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* li.cont__item.recruit */
+.navercorp.main .cont-summary .recruit{
+  background-color: #022be9;
+}
+.navercorp.main .cont-summary .recruit:hover{
+  background-color: #ff5f00;
+}
 
 /* .stock */
-.navercorp.main .cont-summary {
+/* .navercorp.main .cont-summary {
   background-color: #ccc;
-}
-.navercorp.main .cont-summary .cont__item{}
-
+} */
+/* .navercorp.main .cont-summary .cont__item{} */
 
 .navercorp.main .cont-summary .stock a.cont__link{
   padding:16px;
   color:#1d1d1d;
-   display: flex;
+   /* display: flex;
    flex-direction: column;
    justify-content: space-between;
-   height: 100%; 
+   height: 100%;  */
    /*★★★자식의 높이가 부모의 높이를 따르기위해★★*/
 }
 .navercorp.main .cont-summary .stock .head{
@@ -258,6 +250,7 @@
   display: block;
   line-height: 26px;
   font-size: 12px;
+  font-weight: 700;
 }
 .navercorp.main .cont-summary .stock .num-info.up::before{
   content: "▲";
@@ -267,12 +260,14 @@
   content: "▼";
   color:#4078ff;
 }
-.navercorp.main .cont-summary .stock .num-info:before{
-}
 
-.navercorp.main .cont-summary .stock .num-info .num{}
-.navercorp.main .cont-summary .stock .num-info .percent{}
-.navercorp.main .cont-summary .stock .count{}
+.navercorp.main .cont-summary .stock .count{
+font-size: 38px;
+font-weight: 700;
+line-height: 54px;
+letter-spacing: -1.5px;
+color:var(--default);
+}
 
 
 @media (max-width:1919px){
@@ -292,6 +287,11 @@
     line-height: 30px;
     letter-spacing: -0.5px;
   }
+  .navercorp.main .cont-summary .stock .count{
+    font-size: 34px;
+    line-height: 42px;
+    letter-spacing: normal;
+    } 
 
 }
 /*@media (max-width:1919px)*/
@@ -357,6 +357,11 @@
 .navercorp.main .cont-summary .story .title{
   font-size: 18px;
 }
+.navercorp.main .cont-summary .stock .count{
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -0.8px;
+  } 
 }
 /*@media (max-width:1599px)*/
 
@@ -407,6 +412,10 @@
 .navercorp.main .cont-summary .story .category{
   font-size: 12px;
 }
+
+.navercorp.main .cont-summary .stock .num-info{
+  font-size: 12px;
+}
 }
 /*@media (max-width:1023px)*/
 
@@ -450,6 +459,13 @@
 }
 .navercorp.main .cont-summary .cont__item .outlink{
   display: none;
+}
+.navercorp.main .cont-summary .recruit .title{
+  font-size: 20px;
+  font-weight: 700;
+}
+.navercorp.main .cont-summary .stock .num-info{
+  line-height: 26px;
 }
 
 }
