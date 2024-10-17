@@ -14,6 +14,7 @@
   display: flex;
   position: relative;
   max-width: 1600px;
+  margin:0 auto; /*정렬은 크기가 제한이 있어야 적용이 됩니다.*/
 }
 .navercorp.main .cont__area{
   flex:1;
@@ -334,9 +335,61 @@ color:var(--default);
   letter-spacing: -1.5px;
   color:var(--default);
 }
+.navercorp.main .main-content__title::after{
+  content: "";
+  display: block;
+  width: 53px; height: 46px;
+  margin-top: 37px;
+  background: var(--ic-title-arrow) no-repeat center;
+  background-size: contain;
+}
+.navercorp.main .main-content__title strong{
+  display: block;
+}
+.navercorp.main .main-content__title .time{
+  display: flex;
+  margin-top: 20px;
+  letter-spacing: 0;
+}
+/* animation추가 */
+.navercorp.main .main-content__title .time .colon{
+  animation-name: blink;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+/* .main-content__title의 .btn-arrow 아이콘표시 */
+.navercorp.main .main-content__title .btn-arrow{
+  position: absolute;
+  left:0; bottom:0;
+  width: 53px; height: 60px;
+  background: var(--ic-arrow-down) no-repeat center;
+  background-size: contain;
+
+}
+.navercorp.main .main-content__title .btn-arrow:hover{
+  background-image: var(--ic-arrow-down-hover);
+}
+/* 써머리의 공통으로  .main-content__title::after 아이콘표시 제거*/
+.navercorp.main .cont-summary .main-content__title::after{
+  content: none;
+}
+
+/**************
+.cont-feature *
+**************/
+.navercorp.main .cont-feature{
+  padding:100px 0 100px 60px;
+}
 
 
 @media (max-width:1919px){
+  .navercorp.main .main-content__inner{
+    max-width: 1600px;
+  }
+  .navercorp.main .cont-summary{
+    padding:130px 40px 60px;
+  }
   .navercorp.main .cont-summary .cont__area.type-b .cont__list{
     grid-template-rows: 334px 155px 155px;
   }
@@ -358,6 +411,16 @@ color:var(--default);
     line-height: 42px;
     letter-spacing: normal;
     } 
+    .navercorp.main .main-content__title{
+      width: 287px;
+    }
+
+/**************
+.cont-feature *
+**************/
+    .navercorp.main .cont-feature{
+      padding:100px 0 100px 40px;
+    }
 
 }
 /*@media (max-width:1919px)*/
@@ -369,6 +432,9 @@ color:var(--default);
   .navercorp.main .main-content__inner{
     max-width: none;
     flex-direction: column;
+  }
+  .navercorp.main .cont-summary{
+    padding:92px 30px 0;
   }
   .navercorp.main .cont__area{
     margin-top:24px
@@ -431,10 +497,38 @@ color:var(--default);
   .navercorp.main .cont-summary .ir .title{
     margin-top: 2px;
   }
+  .navercorp.main .main-content__title{
+    width: 100%;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -1.2px;
+  }
+  .navercorp.main .main-content__title::after{
+    content: none;/*after 무력화*/
+  }
+  /* .main-content__title의 .btn-arrow 의 위치 수정 */
+  /* 기준요소 오른쪽 끝  기준요소의 바닥 */
+  .navercorp.main .main-content__title .btn-arrow{
+    left:auto; /*상위미디어 작성한 left를 무력화*/
+    right:0; bottom:0;
+    width: 32px ; height: 36px;
+  }
+  /**************
+.cont-feature *
+**************/
+.navercorp.main .cont-feature{
+  padding:120px 0;
+}
+.navercorp.main .cont-feature .main-content__title{
+  padding:0 30px;
+}
 }
 /*@media (max-width:1599px)*/
 
 @media (max-width:1023px){
+  .navercorp.main .cont-summary{
+    padding:110px 30px 0;
+  }
 
   /*.cont-summary  */
   .navercorp.main .cont-summary .cont__list{
@@ -488,10 +582,22 @@ color:var(--default);
 .navercorp.main .cont-summary .ir .title{
   margin-top: 12px;
 }
+
+/**************
+.cont-feature *
+**************/
+.navercorp.main .cont-feature{
+  padding:120px 0 120px;
+}
+
+
 }
 /*@media (max-width:1023px)*/
 
 @media (max-width:767px){
+  .navercorp.main .cont-summary{
+    padding:110px 20px 0;
+  }
   .navercorp.main .cont-summary .cont__list{
     gap:12px 7px;
  }
@@ -550,6 +656,21 @@ color:var(--default);
 .navercorp.main .cont-summary .stock .num-info::after{
   content: none;
 }
+.navercorp.main .main-content__title{
+  font-size: 34px;
+}
+
+/**************
+.cont-feature *
+**************/
+.navercorp.main .cont-feature{
+  padding:120px 0;
+}
+.navercorp.main .cont-feature .main-content__title{
+  padding:0 20px;
+  font-size: 30px;
+  letter-spacing: -1px;
+}
 
 }
 /*@media (max-width:767px)*/
@@ -557,3 +678,9 @@ color:var(--default);
 @media (max-width:375px){
 }
 /*@media (max-width:375px)*/
+
+@keyframes blink{
+  0%{opacity: 1;}
+  50%{opacity: 0;}
+  100%{opacity: 1;}
+}

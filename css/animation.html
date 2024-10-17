@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>animation</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    .container{
+      border: 10px solid #ccc;
+      margin:50px;
+      height: 200px;      
+      position: relative;
+    }
+    .box{
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+    }
+    .ani-elem{
+      left:0; top:0;
+      background-color: dodgerblue;
+      font-size: 1.5rem;
+      animation-name: aniName;
+      animation-duration: 1s;
+      animation-iteration-count: infinite;
+      /* animation-iteration-count: 2; */
+    }
+
+    /* 애니메이션 이름과 키프레임 선언 */
+    @keyframes aniName{
+      from{
+        /* background-color: dodgerblue; */
+        /* top:0; */
+        font-size: 0.5rem;
+      }
+      50%{
+        background-color: deeppink;
+        font-size: 2rem;
+        left:200px;
+        top:0;
+      }
+      to{
+        background-color: deeppink;
+        font-size: 2rem;
+        left:200px;
+        top:200px;
+      }
+    }
+  </style> 
+</head>
+<body>
+  <!-- .container>.box.ani-elem>{1} -->
+  <div class="container">
+    <div class="box ani-elem">1</div>
+  </div>
+</body>
+</html>
