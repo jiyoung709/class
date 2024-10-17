@@ -321,6 +321,19 @@ color:var(--default);
   background-size: contain;
 }
 
+/* .main-content__title */
+.navercorp.main .main-content__title{
+  /* flex item */
+  flex-shrink: 0;
+  position: relative;
+  width:340px ;
+  z-index: 10;
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.5px;
+  color:var(--default);
+}
 
 
 @media (max-width:1919px){
