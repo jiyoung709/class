@@ -1,0 +1,21 @@
+* {margin:0; padding: 0; box-sizing: border-box;}
+
+/* 테스트용으로 .swiper 크기지정 */
+.swiper{
+  width:70%;
+  height: 400px;
+  background-color: #ccc;
+  border: 1px solid #000;
+}
+
+.swiper-slide{
+  text-align: center;
+  /* align-self: center; swiper-slide 이미 부모의 너비/높이를 다쓰고 있어*/
+  align-content: center;
+}
+.swiper-slide:nth-child(odd){
+  background-color: #ff6;
+}
+.swiper-slide:nth-child(even){
+  background-color: #f6f;
+}
