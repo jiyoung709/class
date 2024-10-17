@@ -3,28 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>swiper 연습1</title>
+  <title>swiper 연습2 - 페이지네이션(블릿) 모양 변경</title>
   <!-- swiper 관련 css 설치 -->
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-  />
+  <link  rel="stylesheet"  href="css/swiper-bundle.min.css"  />
   <!-- 라이브러리 css보다 본인작성 스타일  뒤에 연결 -->
    <link rel="stylesheet" href="css/style.css">
   <!-- swiper 라이브러리 설치 -->
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <style>
+    .myswiper2 .swiper-pagination{
+      bottom:20px;
+    }
+    /* pagination 모양 색상변경 */
+    .myswiper2 .swiper-pagination-bullet{
+      width:20px;
+      /* width: 40px; */
+      height: 4px;
+      background-color: #000;
+      border-radius: 2px;
+    }
+    .myswiper2 .swiper-pagination-bullet.swiper-pagination-bullet-active{
+      opacity: 1;
+      background-color: #000;
+      width:40px;
+
+    }
+  </style>
 
 </head>
 <body>
   <!-- Slider main container -->
-<div class="swiper myswiper1">
+   <!-- myswiper2 클래스명을 변경 아래 script의 .myswiper2 라고 지정한 선택자 변경-->
+<div class="swiper myswiper2">
   <!-- Additional required wrapper -->
   <div class="swiper-wrapper">
     <!-- Slides -->
     <div class="swiper-slide">Slide 1</div>
     <div class="swiper-slide">Slide 2</div>
     <div class="swiper-slide">Slide 3</div>
-    ...
+    <div class="swiper-slide">Slide 4</div>
+    <div class="swiper-slide">Slide 5</div>
+    <div class="swiper-slide">Slide 6</div>
+   
   </div>
   <!-- If we need pagination -->
   <div class="swiper-pagination"></div>
@@ -43,7 +63,7 @@
   **여러줄 코멘트
   */
  // 한줄 코멘트  
-  const swiper = new Swiper('.myswiper1', {
+  const swiper = new Swiper('.myswiper2', {
   // Optional parameters
   // direction: 'vertical',
   loop: true,
