@@ -9,7 +9,11 @@
   <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/common.css"> -->
+	<!-- swiper 라이브러리 css 연결 -->
+	<link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
+	<!-- swiper 라이브러리 설치 -->
+	<script src="js/swiper/swiper-bundle.min.js"></script>
 </head>
 
 <body>
@@ -132,10 +136,11 @@
 					<div class="main-content__title">
 						<strong data-i18n="[html]main:title01">주요 서비스와 <br>기술</strong>
 					</div>
+					<!--.cont-feature .cont__area  -->
 					<div class="cont__area">
-						<div class="cont__wrap">
-							<ul class="cont__list" aria-live="polite">
-								<li class="cont__item">
+						<div class="cont__wrap swiper ">
+							<ul class="cont__list swiper-wrapper">
+								<li class="cont__item swiper-slide">
 									<a class="cont__link" href="https://datacenter.navercorp.com/" onclick="nclk_v2(event, 'sct.dtk')"
 										target="_blank">
 										<div class="thumb-box">
@@ -150,7 +155,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="cont__item">
+								<li class="cont__item  swiper-slide">
 									<a class="cont__link" href="/tech/techAI" onclick="nclk_v2(event, 'sct.nai')">
 										<div class="thumb-box">
 											<div class="thumbnail"><span class="blind">썸네일 이미지</span></div>
@@ -164,7 +169,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="cont__item">
+								<li class="cont__item  swiper-slide">
 									<a class="cont__link" href="/tech/tech1784" onclick="nclk_v2(event, 'sct.1784')">
 										<div class="thumb-box">
 											<div class="thumbnail"><span class="blind">썸네일 이미지</span></div>
@@ -178,7 +183,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="cont__item">
+								<li class="cont__item  swiper-slide">
 									<a class="cont__link" href="/esg/projectFlower" onclick="nclk_v2(event, 'sct.flw')">
 										<div class="thumb-box">
 											<div class="thumbnail"><span class="blind">썸네일 이미지</span></div>
@@ -193,7 +198,7 @@
 										</div>
 									</a>
 								</li>
-								<li class="cont__item">
+								<li class="cont__item  swiper-slide>
 									<a class="cont__link" href="/tech/digitalTwin" onclick="nclk_v2(event, 'sct.twt')">
 										<div class="thumb-box">
 											<div class="thumbnail"><span class="blind">썸네일 이미지</span></div>
