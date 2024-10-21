@@ -378,9 +378,104 @@ color:var(--default);
 /**************
 .cont-feature *
 **************/
+/* 
+1. 주요서비스와 기술   
+   1600이상 일때는 두줄
+   1599 보다 아래 일때는 1줄
+    .main-content__title strong br{
+    display: none;
+}
+2. 모바일 일대 swiper-slide가 1.x개 나올 수 있도록
+*/
 .navercorp.main .cont-feature{
   padding:100px 0 100px 60px;
 }
+.navercorp.main .cont-feature .cont__area{
+  overflow: hidden;
+}
+.navercorp.main .cont-feature .cont__wrap{
+ /* 네비게이션 버튼 클릭 시  오른쪽 끝은 swiper-slide 
+ 움직이면서 보여야 해요 */
+}
+.navercorp.main .cont-feature .cont__list{}
+.navercorp.main .cont-feature .cont__item{
+  /* 2. 모바일 일대 swiper-slide가 1.x개 나올 수 있도록 */
+  width: 340px;
+  margin-left:20px;
+}
+.navercorp.main .cont-feature .cont__item:first-child{
+  margin-left:0;
+}
+.navercorp.main .cont-feature .thumb-box{
+  position: relative;
+  overflow: hidden;
+}
+.navercorp.main .cont-feature .thumb-box .thumbnail{
+  padding-top: 320px; /*백그라운드이미지의 높이역활*/
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  transition: transform 0.3s;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(1) .thumbnail{
+  background-image: url(../img/slider1.jpg);
+}
+.navercorp.main .cont-feature .cont__item:nth-child(2) .thumbnail{
+  background-image: url(../img/slider2.png);
+}
+.navercorp.main .cont-feature .cont__item:nth-child(3) .thumbnail{
+  background-image: url(../img/slider3.png);
+}
+.navercorp.main .cont-feature .cont__item:nth-child(4) .thumbnail{
+  background-image: url(../img/slider4.png)
+}
+.navercorp.main .cont-feature .cont__item:nth-child(5) .thumbnail{
+  background-image: url(../img/slider5.png);
+}
+.navercorp.main .cont-feature .text-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px;
+  padding: 26px 20px 20px;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(1) .text-box{
+  background: #030659;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(2) .text-box{
+  background: #000;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(3) .text-box{
+  background: #9bacba;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(4) .text-box{
+  background: #598de8;
+}
+.navercorp.main .cont-feature .cont__item:nth-child(5) .text-box{
+  background: #8731e3;
+}
+.navercorp.main .cont-feature .text-box .category{
+  display: block;
+  font-size: 14px;
+}
+.navercorp.main .cont-feature .text-box .title{
+  display: block;
+  margin-top: 42px;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: -0.1px;
+}
+.navercorp.main .cont-feature .text-box .desc{
+  text-transform: none;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.25px;
+}
+
+
 
 
 @media (max-width:1919px){
@@ -522,6 +617,30 @@ color:var(--default);
 .navercorp.main .cont-feature .main-content__title{
   padding:0 30px;
 }
+.navercorp.main .cont-feature .main-content__title strong br{
+  /* ★★★스타일북, 룩북, 상세페이지에서 ★★  줄바꿈을 관리할 때 유용*/
+  display: none;
+}
+.navercorp.main .cont-feature .cont__item{
+  width: 300px;
+  margin-left: 16px;
+}
+.navercorp.main .cont-feature .thumb-box .thumbnail{
+  padding-top: 282px;
+}
+.navercorp.main .cont-feature .text-box .category{
+  font-size: 12px;
+}
+.navercorp.main .cont-feature .text-box .title{
+  margin-top: 36px;
+  font-size: 26px;
+  line-height: 38px;
+  letter-spacing: -0.1px;
+}
+.navercorp.main .cont-feature .text-box .desc{
+  font-size: 12px;
+  line-height: 20px;
+}
 }
 /*@media (max-width:1599px)*/
 
@@ -589,7 +708,19 @@ color:var(--default);
 .navercorp.main .cont-feature{
   padding:120px 0 120px;
 }
-
+.navercorp.main .cont-feature .cont__item{
+  width: 320px;
+  margin-left: 12px;
+}
+.navercorp.main .cont-feature .thumb-box .thumbnail{
+  padding-top: 301px;
+}
+.navercorp.main .cont-feature .text-box .title{
+  margin-top: 48px;
+  font-size: 28px;
+  line-height: 42px;
+  letter-spacing: -0.1px;
+}
 
 }
 /*@media (max-width:1023px)*/
@@ -671,7 +802,9 @@ color:var(--default);
   font-size: 30px;
   letter-spacing: -1px;
 }
-
+.navercorp.main .cont-feature .thumb-box .thumbnail{
+  padding-top: 300px;
+}
 }
 /*@media (max-width:767px)*/
 
