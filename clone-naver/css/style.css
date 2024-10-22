@@ -9,11 +9,10 @@
   padding-top: 70px;
   padding-bottom: 160px;
 }
-.navercorp.main .main-content{}
 .navercorp.main .main-content__inner {
   display: flex;
   position: relative;
-  max-width: 1600px;
+  max-width: 1900px;
   margin:0 auto; /*정렬은 크기가 제한이 있어야 적용이 됩니다.*/
 }
 .navercorp.main .cont__area{
@@ -395,7 +394,19 @@ color:var(--default);
 }
 .navercorp.main .cont-feature .cont__wrap{
  /* 네비게이션 버튼 클릭 시  오른쪽 끝은 swiper-slide 
- 움직이면서 보여야 해요 */
+ 움직이면서 보여야 해요 
+ .navercorp.main .main-content__inner {
+    max-width: 1900px;
+    margin: 0 auto;
+}
+ .navercorp.main .cont-feature {
+    padding: 100px 0 100px 60px;
+}
+  .navercorp.main .cont-feature .cont__wrap {
+  overflow: unset;
+}
+ */
+
 }
 .navercorp.main .cont-feature .cont__list{}
 .navercorp.main .cont-feature .cont__item{
@@ -517,12 +528,41 @@ color:var(--default);
 .navercorp.main .cont-feature .cont__wrap{
   overflow: unset;
 }
+/********************** 
+*  .cont-shortcut     *
+***********************/
+/* 
+  타이틀, 아이콘 이 양끝정렬
+  cont__item hover 타이틀, 아이콘 색상변경, 해당 이미지 가운데 표시
+     hover 해당 이미지 표시
+            이미지너비 작게-> 정사각형맞는 크기 변경 푯
+   out 해당 바로 표시x
+*/
+.navercorp.main .cont-shortcut{
+  padding:60px 60px 0;
+}
+.navercorp.main .cont-shortcut .cont__item{
+  position: relative;
+  border-top:1px solid var(--border01);
+}
+.navercorp.main .cont-shortcut .cont__item:nth-child(1){
+  border-top: 0;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: center;
+  padding: 32px 20px;
+}
+.navercorp.main .cont-shortcut .cont__item:nth-child(1) .cont__link{
+  padding-top: 0;
+}
 
 
 
 @media (max-width:1919px){
   .navercorp.main .main-content__inner{
-    max-width: 1600px;
+    max-width: 1900px;
   }
   .navercorp.main .cont-summary{
     padding:130px 40px 60px;
@@ -558,6 +598,13 @@ color:var(--default);
     .navercorp.main .cont-feature{
       padding:100px 0 100px 40px;
     }
+
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:60px 40px 0;
+}
 
 }
 /*@media (max-width:1919px)*/
@@ -687,6 +734,19 @@ color:var(--default);
   padding: 0 30px;
   margin-top:40px;
 }
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:0 30px;
+}
+.navercorp.main .cont-shortcut .cont__area{
+  margin-top: 60px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 22px 0 25px;
+}
+
 }
 /*@media (max-width:1599px)*/
 
@@ -766,6 +826,22 @@ color:var(--default);
   font-size: 28px;
   line-height: 42px;
   letter-spacing: -0.1px;
+}
+.navercorp.main .cont-feature .cont__btn{
+  display: none;
+}
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut .main-content__title{
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.navercorp.main .cont-shortcut .cont__area{
+  margin-top: 55px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 22px 0 25px;
 }
 
 }
@@ -854,6 +930,16 @@ color:var(--default);
 .navercorp.main .cont-feature .cont__area{
   padding: 0 20px;
 }
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:0 20px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 26px 4px 27px 0;
+}
+
 }
 /*@media (max-width:767px)*/
 
