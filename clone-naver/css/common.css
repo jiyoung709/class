@@ -17,6 +17,9 @@ a,
 button {
   color: var(--default);
 }
+img{
+  width: 100%;
+}
 
 .skip {
   height: 0;
