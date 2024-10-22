@@ -474,7 +474,49 @@ color:var(--default);
   line-height: 22px;
   letter-spacing: -0.25px;
 }
-
+/* swiper 네비게이션 이밎로 변경 */
+.navercorp.main .cont-feature .cont__btn .swiper-button-next, 
+.navercorp.main .cont-feature .cont__btn .swiper-button-prev{
+  /*브라우저가 인식하지만 브라우저에 표시x*/
+  /* visibility: hidden; */
+  width: 40px;
+  height: 40px;
+  margin-top: 0;
+  background: url(../img/common/swiper-btn.png) no-repeat center;
+  background-size: contain;
+  transition: all 0.3s;
+  pointer-events: auto;
+  /* opacity: 0; */
+  /* 기분요소의 가운데 위치 */
+  top:50%;
+  transform: translateY(-50%);
+}
+.navercorp.main .cont-feature .cont__btn .swiper-button-next{
+  right: 0;
+  transform: rotate(180deg) translateY(50%);
+} 
+.navercorp.main .cont-feature .cont__btn .swiper-button-prev{
+  left:0;
+}
+/* swiperr처음이나 끝일때는  네비게이션 표시x */
+.navercorp.main .cont-feature .cont__btn .swiper-button-next.swiper-button-disabled, 
+.navercorp.main .cont-feature .cont__btn .swiper-button-prev.swiper-button-disabled{
+  opacity: 0;
+  cursor: auto;/*마우스 포인트는 상황에 맞게 바뀌어라*/
+  pointer-events: none;/*해당영역에 클릭 이벤트가 발생해도 실행x*/
+}
+.navercorp.main .cont-feature .cont__btn .swiper-button-next:hover, 
+.navercorp.main .cont-feature .cont__btn .swiper-button-prev:hover{
+  background-image: url(../img/common/swiper-btn-hover.png);
+}
+.navercorp.main .cont-feature .cont__btn .swiper-button-next:after, 
+.navercorp.main .cont-feature .cont__btn .swiper-button-prev:after{
+  content: none;/*가상선택자 after 무력화*/
+}
+/* swiper 움직일때 .swiper 영역 벗어난거도 보이게 처리*/ 
+.navercorp.main .cont-feature .cont__wrap{
+  overflow: unset;
+}
 
 
 
@@ -641,6 +683,10 @@ color:var(--default);
   font-size: 12px;
   line-height: 20px;
 }
+.navercorp.main .cont-feature .cont__area{
+  padding: 0 30px;
+  margin-top:40px;
+}
 }
 /*@media (max-width:1599px)*/
 
@@ -804,6 +850,9 @@ color:var(--default);
 }
 .navercorp.main .cont-feature .thumb-box .thumbnail{
   padding-top: 300px;
+}
+.navercorp.main .cont-feature .cont__area{
+  padding: 0 20px;
 }
 }
 /*@media (max-width:767px)*/
