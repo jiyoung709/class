@@ -574,7 +574,7 @@ color:var(--default);
   display: block;
   width: 30px; height: 30px;
   border-radius: 50%;
-  background: var(--color-sub02) url(../img/common/ic-quicklink-black.png) no-repeat center;
+  background: var(--color-sub02) url(../img/common/ic-quicklink.png) no-repeat center;
   background-size: contain;
   transition:  background 0.3s;
 }
@@ -582,17 +582,28 @@ color:var(--default);
   transform: rotate(-45deg);
 }
 .navercorp.main .cont-shortcut .cont__item .thumb-box{
-    /* visibility: hidden; */
+    visibility: hidden;
     position: absolute;
     top:50%;/*가운데부터 시작이라 아래로 치우쳐져있어요*/
     left:50%; /*가운데부터 시작이라 오른쪽은 치우쳐져있어요*/
     transform: translate(-50%, -50%);/*이미지를 부모요소의 가운데*/
     z-index: 1;
     width: 300px; height: 300px;
-    /* opacity: 0; */
-    
+    opacity: 0;
+    transition:opacity linear 0.3s;
+    pointer-events: none;
 }
-
+.navercorp.main .cont-shortcut .cont__item:hover .thumb-box{
+  visibility: visible;
+   opacity: 1;
+   animation: thumbBoxEffect 0.3s ease-in-out forwards;
+}
+.navercorp.main .cont-shortcut .cont__item .thumb-box img{
+  transform: translate(100%, 0,0);
+}
+.navercorp.main .cont-shortcut .cont__item:hover .thumb-box img{
+  animation: thumbnailEffect 0.3s ease-in-out forwards;
+}
 
 
 @media (max-width:1919px){
@@ -986,4 +997,14 @@ color:var(--default);
   0%{opacity: 1;}
   50%{opacity: 0;}
   100%{opacity: 1;}
+}
+
+@keyframes thumbBoxEffect {
+   0%{ transform:translate(-150%, -50%)}
+   100%{transform: translate(-50%, -50%);}
+}
+
+@keyframes thumbnailEffect{
+   0%{transform: translate(100%,0);}
+   100%{transform: translate(0,0);}
 }
