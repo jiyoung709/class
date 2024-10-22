@@ -557,6 +557,41 @@ color:var(--default);
 .navercorp.main .cont-shortcut .cont__item:nth-child(1) .cont__link{
   padding-top: 0;
 }
+.navercorp.main .cont-shortcut .cont__item .title{
+  position: relative;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.26px;
+  transition: color 0.3s;
+}
+.navercorp.main .cont-shortcut .cont__item:hover .title{
+  color:#ff5f00;
+}
+.navercorp.main .cont-shortcut .cont__item .ico-link{ }
+.navercorp.main .cont-shortcut .cont__item .ico-link:after{
+  content: "";
+  display: block;
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--color-sub02) url(../img/common/ic-quicklink-black.png) no-repeat center;
+  background-size: contain;
+  transition:  background 0.3s;
+}
+.navercorp.main .cont-shortcut .cont__item .ico-link.outlink:after{
+  transform: rotate(-45deg);
+}
+.navercorp.main .cont-shortcut .cont__item .thumb-box{
+    /* visibility: hidden; */
+    position: absolute;
+    top:50%;/*가운데부터 시작이라 아래로 치우쳐져있어요*/
+    left:50%; /*가운데부터 시작이라 오른쪽은 치우쳐져있어요*/
+    transform: translate(-50%, -50%);/*이미지를 부모요소의 가운데*/
+    z-index: 1;
+    width: 300px; height: 300px;
+    /* opacity: 0; */
+    
+}
 
 
 
