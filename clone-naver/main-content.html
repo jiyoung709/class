@@ -12,8 +12,7 @@
 	<!-- swiper 라이브러리 css 연결 -->
 	<link rel="stylesheet" href="js/swiper/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
-	<!-- swiper 라이브러리 설치 -->
-	<script src="js/swiper/swiper-bundle.min.js"></script>
+
 </head>
 
 <body>
@@ -138,7 +137,7 @@
 					</div>
 					<!--.cont-feature .cont__area  -->
 					<div class="cont__area">
-						<div class="cont__wrap swiper ">
+						<div class="cont__wrap swiper myswiper">
 							<ul class="cont__list swiper-wrapper">
 								<li class="cont__item swiper-slide">
 									<a class="cont__link" href="https://datacenter.navercorp.com/" onclick="nclk_v2(event, 'sct.dtk')"
@@ -213,9 +212,13 @@
 									</a>
 								</li>
 							</ul>
-							<div class="cont__btn"></div>
-							<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+							<div class="cont__btn">
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
+				      <div class="swiper-scrollbar"></div>
 						</div>
+						<!-- //.swiper -->
 					</div>
 				</div>
 				<!-- //.cont-feature -->
@@ -299,6 +302,27 @@
 		<div class="dimmed"></div>
 
 	</div>
+
+
+		<!-- swiper 라이브러리 설치 -->
+		<script src="js/swiper/swiper-bundle.min.js"></script>
+
+		  <!-- Initialize Swiper -->
+			<script>
+				var swiper = new Swiper(".myswiper", {
+					slidesPerView: "auto",
+					// 본인 .swiper-slide에 (.cont__item) 여백을 주면 spaceBetween:0
+					spaceBetween: 0,
+					navigation: {
+						nextEl: ".swiper-button-next",
+						prevEl: ".swiper-button-prev",
+					},
+					scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: false,
+      },
+				});
+			</script>
 </body>
 
 </html>
