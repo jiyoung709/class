@@ -538,6 +538,25 @@ color:var(--default);
             이미지너비 작게-> 정사각형맞는 크기 변경 푯
    out 해당 바로 표시x
 */
+.navercorp.main .cont-shortcut{
+  padding:60px 60px 0;
+}
+.navercorp.main .cont-shortcut .cont__item{
+  position: relative;
+  border-top:1px solid var(--border01);
+}
+.navercorp.main .cont-shortcut .cont__item:nth-child(1){
+  border-top: 0;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  flex-direction: row;
+  justify-content:space-between ;
+  align-items: center;
+  padding: 32px 20px;
+}
+.navercorp.main .cont-shortcut .cont__item:nth-child(1) .cont__link{
+  padding-top: 0;
+}
 
 
 
@@ -579,6 +598,13 @@ color:var(--default);
     .navercorp.main .cont-feature{
       padding:100px 0 100px 40px;
     }
+
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:60px 40px 0;
+}
 
 }
 /*@media (max-width:1919px)*/
@@ -708,6 +734,19 @@ color:var(--default);
   padding: 0 30px;
   margin-top:40px;
 }
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:0 30px;
+}
+.navercorp.main .cont-shortcut .cont__area{
+  margin-top: 60px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 22px 0 25px;
+}
+
 }
 /*@media (max-width:1599px)*/
 
@@ -790,6 +829,19 @@ color:var(--default);
 }
 .navercorp.main .cont-feature .cont__btn{
   display: none;
+}
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut .main-content__title{
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.navercorp.main .cont-shortcut .cont__area{
+  margin-top: 55px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 22px 0 25px;
 }
 
 }
@@ -878,6 +930,16 @@ color:var(--default);
 .navercorp.main .cont-feature .cont__area{
   padding: 0 20px;
 }
+/********************** 
+*  .cont-shortcut     *
+***********************/
+.navercorp.main .cont-shortcut{
+  padding:0 20px;
+}
+.navercorp.main .cont-shortcut .cont__link{
+  padding: 26px 4px 27px 0;
+}
+
 }
 /*@media (max-width:767px)*/
 
