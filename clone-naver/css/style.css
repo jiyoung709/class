@@ -24,6 +24,10 @@
 /****************
 *.cont__summary *
 *****************/
+/* 10.23 추가 */
+.navercorp.main .cont-summary {
+  padding: 150px 60px 80px;
+}
 .navercorp.main .cont-summary .cont__list{
    display: grid;
    gap:20px;
@@ -582,7 +586,9 @@ color:var(--default);
   transform: rotate(-45deg);
 }
 .navercorp.main .cont-shortcut .cont__item .thumb-box{
-    visibility: hidden;
+    /* visibility: hidden; /*10.23 삭제*/
+    /* .thumb-box 크기 밖에 있는 표시x */
+    overflow: hidden;/*10.23 수정*/
     position: absolute;
     top:50%;/*가운데부터 시작이라 아래로 치우쳐져있어요*/
     left:50%; /*가운데부터 시작이라 오른쪽은 치우쳐져있어요*/
@@ -590,19 +596,24 @@ color:var(--default);
     z-index: 1;
     width: 300px; height: 300px;
     opacity: 0;
-    transition:opacity linear 0.3s;
+    transition:opacity linear 0.1s;
     pointer-events: none;
 }
 .navercorp.main .cont-shortcut .cont__item:hover .thumb-box{
-  visibility: visible;
+  /* visibility: visible; /*10.23 삭제*/
    opacity: 1;
    animation: thumbBoxEffect 0.3s ease-in-out forwards;
 }
 .navercorp.main .cont-shortcut .cont__item .thumb-box img{
   transform: translate(100%, 0,0);
+  /* .thumb-box 밖으로 이미지 밀어내기 위해서 */
 }
 .navercorp.main .cont-shortcut .cont__item:hover .thumb-box img{
   animation: thumbnailEffect 0.3s ease-in-out forwards;
+}
+.navercorp.main .cont-shortcut .cont__item:hover .ico-link:after{
+  background-image: url(../img/common/ic-quicklink-black.png);
+  background-color: #ff5f00;
 }
 
 
@@ -889,6 +900,9 @@ color:var(--default);
 .navercorp.main .cont-shortcut .cont__link{
   padding: 22px 0 25px;
 }
+.navercorp.main .cont-shortcut .cont__item .thumb-box{
+  display: none;
+}
 
 }
 /*@media (max-width:1023px)*/
@@ -1007,4 +1021,5 @@ color:var(--default);
 @keyframes thumbnailEffect{
    0%{transform: translate(100%,0);}
    100%{transform: translate(0,0);}
+    /* .thumb-box 안으로 이미지 표시 */
 }
