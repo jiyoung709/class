@@ -74,7 +74,63 @@
   color:#1d1d1f;
 }
 
+.footer__info .social__wrap{
+  padding-bottom: 20px;
+}
 
+.footer__info .social__list{
+  display: flex;
+  margin: 0 -6px;
+  font-size: 0;
+}
+.footer__info .social__item{
+  margin: 0 6px;
+  display: inline-block;
+}
+.footer__info .social__link{
+  display: block;
+  width: 30px; height: 30px;
+  background-image: url(../img/desktop.png);
+  /*기존 크기의 반크기로 지정*/
+  background-size: 328px 283px;
+}
+
+.footer__info .social__item:nth-child(1) .social__link{
+  background-position: -32px -169px;
+}
+.footer__info .social__item:nth-child(2) .social__link{
+  background-position:-160px -169px;
+}
+.footer__info .social__item:nth-child(3) .social__link{
+  background-position: -220px -32px;
+}
+.footer__info .social__item:nth-child(4) .social__link{
+  background-position: -96px -169px;
+}
+.footer__info .social__item:nth-child(5) .social__link{
+  background-position: -220px -96px;
+}
+.footer__info .social__item:nth-child(6) .social__link{
+  background-position:-220px -160px;
+}
+.footer__info .social__item:nth-child(1) .social__link:hover{
+  background-position: 0px -169px;
+}
+.footer__info .social__item:nth-child(2) .social__link:hover{
+  background-position:-128px -169px;
+}
+.footer__info .social__item:nth-child(3) .social__link:hover{
+  background-position: -220px 0px;
+}
+.footer__info .social__item:nth-child(4) .social__link:hover{
+  background-position: -64px -169px;
+}
+.footer__info .social__item:nth-child(5) .social__link:hover{
+  background-position: -220px -64px;
+}
+.footer__info .social__item:nth-child(6) .social__link:hover{
+  background-position:-220px -128px;
+}
 
 
 
@@ -112,6 +168,9 @@
     line-height: 1.31;
     letter-spacing: -0.1px;
   }
+  .footer__info .social__wrap{
+    padding-bottom: 84px;
+  }
 }
 /* footer @media (max-width:1599px){} */
 
@@ -130,6 +189,9 @@
     font-size: 72px;
     line-height: 1.03;
     margin-top:77px;
+  }
+  .footer__info .social__wrap{
+    padding-bottom:0;
   }
 
 }

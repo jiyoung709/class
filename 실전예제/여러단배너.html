@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배너 </title>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+    .maybanner{margin:50px;}
+    ul,ol,li{list-style: none;}
+    a{text-decoration: none;}
+
+    /*여기서 부터 단 배너 css */
+    .mybanner{
+      --banner-gap:20px;
+      --banner-top-margin:50px;
+      --banner-bottom-margin:50px;
+      --banner-top-padding:10px;
+      --banner-bottom-padding:10px;
+      --banner-max-width:1440px;
+      --col1:100%;
+      --col2:50%;
+      --col3:33.333%;
+      --col4:25%;
+      --col5:20%;
+    }
+    .mybanner{
+      margin-top: var(--banner-top-margin);
+      margin-bottom: var(--banner-bottom-margin);
+      background-color: #ccc;/*삭제*/
+    }
+    .mybanner__inner{
+      max-width: var(--banner-max-width);
+      margin: 0 auto;
+      padding-top:var(--banner-top-padding);
+      padding-bottom:var(--banner-bottom-padding);
+      background-color: #f6f;/*삭제*/
+    }
+    .mybanner__list{
+      display: flex;
+      gap: var(--banner-gap);
+      box-sizing: border-box;
+    }
+    .mybanner__item{
+      flex:1;
+      box-sizing: border-box;
+      background-color: #66f;
+    }
+    .mybanner__list.grid1  .mybanner__item{width: var(--col1);   }
+    .mybanner__list.grid2  .mybanner__item{width: var(--col2);   }
+    .mybanner__list.grid3  .mybanner__item{width: var(--col3);   }
+    .mybanner__list.grid4  .mybanner__item{width: var(--col4);   }
+    .mybanner__list.grid5  .mybanner__item{width: var(--col5);   }
+    .mybanner__link{display: block;}
+    .mybanner .thumb-box img{ width: 100%;}
+    .mybanner .text-box .text-title{}
+    .mybanner .text-box .text-desc{}
+ 
+  </style>
+</head>
+<body>
+  <div class="mybanner">
+    <div class="mybanner__inner">
+      <ul class="mybanner__list grid3">
+        <li class="mybanner__item">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+              <img src="/css/background/images/bg.jpg" alt="">
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+        <li class="mybanner__item">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+              <img src="/css/background/images/bg.jpg" alt="">
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+        <li class="mybanner__item">
+          <a href="" class="mybanner__link">
+            <div class="thumb-box">
+              <img src="/css/background/images/bg.jpg" alt="">
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
