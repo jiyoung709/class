@@ -1,0 +1,99 @@
+/*여기서 부터 단 배너 css */
+/* 기존 스킨 배너 옆 양쪽 여백 없애기 */
+#container #contents > .section.mybanner-wrapper {
+  max-width: none;
+}
+@media (min-width:1024px){
+#contents > .section.mybanner-wrapper  {
+  max-width: none;
+  width: 100%;
+}
+}/*//@media*/
+
+    .mybanner{
+      --banner-gap:20px;/*pc 갭*/
+      --banner-m-h-gap:10px;/*모바일 수평 갭*/
+      --banner-m-v-gap:10px;/*모바일 수직 갭*/
+      --banner-top-margin:50px;
+      --banner-bottom-margin:50px;
+      --banner-top-padding:50px;
+      --banner-bottom-padding:50px;
+      --banner-max-width:1440px;
+      --col1:100%;
+      --col2:50%;
+      --col3:33.333%;
+      --col4:25%;
+      --col5:20%;
+    }
+
+    .mybanner{
+      margin-top: var(--banner-top-margin);
+      margin-bottom: var(--banner-bottom-margin);
+      background-color: #dd6;
+    }
+    .mybanner__inner{
+      max-width: var(--banner-max-width);
+      margin: 0 auto;
+      padding-top:var(--banner-top-padding);
+      padding-bottom:var(--banner-bottom-padding);
+    }
+    .mybanner__list{
+      display: flex;
+      gap: var(--banner-gap);
+      box-sizing: border-box;
+    }
+    .mybanner__item{
+      flex:1;
+      box-sizing: border-box;
+      background-color: #66f;
+    }
+    .mybanner__list.grid1  .mybanner__item{width: var(--col1);   }
+    .mybanner__list.grid2  .mybanner__item{width: var(--col2);   }
+    .mybanner__list.grid3  .mybanner__item{width: var(--col3);   }
+    .mybanner__list.grid4  .mybanner__item{width: var(--col4);   }
+    .mybanner__list.grid5  .mybanner__item{width: var(--col5);   }
+    .mybanner__link{display: block;}
+    .mybanner .thumb-box picture,
+    .mybanner .thumb-box picture source,
+    .mybanner .thumb-box picture img{ 
+      display: block;
+       width: 100%;
+      }
+    .mybanner .text-box .text-title{}
+    .mybanner .text-box .text-desc{}
+ 
+    @media (max-width:767px){
+      .mybanner__list{
+        gap: var(--banner-m-h-gap)  var(--banner-m-v-gap);
+        flex-wrap: wrap;
+      }
+      .mybanner__item{
+        flex:1 0 auto;
+      }
+
+      .mybanner .mybanner__item.m-col1{width: calc(var(--col1) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col2{width: calc(var(--col2) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col3{width:calc(var(--col3) - var(--banner-m-v-gap));}
+      .mybanner .mybanner__item.m-col4{width:calc(var(--col4) - var(--banner-m-v-gap));}
+  
+    }
+ /*.mybanner 단배너 스타일끝 */
+
+ /* footer .bt_sns 시작 */
+ #footer .inner .bt_sns .title {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+ #footer .inner .bt_top_right .bt_sns a { 
+  margin-top:20px;
+  width:34px; height: 34px;
+  overflow: hidden;
+ }
+#footer .inner .bt_top_right .bt_sns a svg {height:34px;}
+#footer .inner .bt_top_right .bt_sns a svg path {fill:#ababab;-webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s;  transition: all 0.3s;}
+#footer .inner .bt_top_right .bt_sns a:hover svg path {fill:#111;}
+
+
+ /* footer bt-sns 끝 */
