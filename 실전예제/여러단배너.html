@@ -14,7 +14,7 @@
     /*여기서 부터 단 배너 css */
     .mybanner{
       --banner-gap:20px;
-      --banner-m-h-gap:0px;/*모바일 수평 갭*/
+      --banner-m-h-gap:10px;/*모바일 수평 갭*/
       --banner-m-v-gap:10px;/*모바일 수직 갭*/
       --banner-top-margin:50px;
       --banner-bottom-margin:50px;
@@ -31,14 +31,12 @@
     .mybanner{
       margin-top: var(--banner-top-margin);
       margin-bottom: var(--banner-bottom-margin);
-      background-color: #ccc;/*삭제*/
     }
     .mybanner__inner{
       max-width: var(--banner-max-width);
       margin: 0 auto;
       padding-top:var(--banner-top-padding);
       padding-bottom:var(--banner-bottom-padding);
-      background-color: #f6f;/*삭제*/
     }
     .mybanner__list{
       display: flex;
@@ -56,7 +54,12 @@
     .mybanner__list.grid4  .mybanner__item{width: var(--col4);   }
     .mybanner__list.grid5  .mybanner__item{width: var(--col5);   }
     .mybanner__link{display: block;}
-    .mybanner .thumb-box img{ width: 100%;}
+    .mybanner .thumb-box picture,
+    .mybanner .thumb-box picture source,
+    .mybanner .thumb-box picture img{ 
+      display: block;
+       width: 100%;
+      }
     .mybanner .text-box .text-title{}
     .mybanner .text-box .text-desc{}
  
@@ -84,7 +87,13 @@
         <li class="mybanner__item m-col2">
           <a href="" class="mybanner__link">
             <div class="thumb-box">
-              <img src="/css/background/images/bg.jpg" alt="">
+              <picture>
+                <source 
+                   srcset="../html/picture/picture/img/img_768x768.jpg" 
+                   media="(max-width: 767px)">
+               <img src="../html/picture/picture/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목</p>
@@ -95,7 +104,13 @@
         <li class="mybanner__item m-col2">
           <a href="" class="mybanner__link">
             <div class="thumb-box">
-              <img src="/css/background/images/bg.jpg" alt="">
+              <picture>
+                <source 
+                   srcset="../html/picture/picture/img/img_768x768.jpg" 
+                   media="(max-width: 767px)">
+               <img src="../html/picture/picture/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목</p>
@@ -103,10 +118,16 @@
             </div>
           </a>
         </li>
-        <li class="mybanner__item">
+        <li class="mybanner__item m-col1">
           <a href="" class="mybanner__link">
             <div class="thumb-box">
-              <img src="/css/background/images/bg.jpg" alt="">
+              <picture>
+                <source 
+                   srcset="../html/picture/picture/img/img_1920x810.jpg" 
+                   media="(max-width: 767px)">
+               <img src="../html/picture/picture/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목</p>
@@ -114,6 +135,7 @@
             </div>
           </a>
         </li>
+        
 
       </ul>
     </div>
