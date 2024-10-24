@@ -1,4 +1,15 @@
 /*여기서 부터 단 배너 css */
+/* 기존 스킨 배너 옆 양쪽 여백 없애기 */
+#container #contents > .section.mybanner-wrapper {
+  max-width: none;
+}
+@media (min-width:1024px){
+#contents > .section.mybanner-wrapper  {
+  max-width: none;
+  width: 100%;
+}
+}/*//@media*/
+
     .mybanner{
       --banner-gap:20px;/*pc 갭*/
       --banner-m-h-gap:10px;/*모바일 수평 갭*/
@@ -67,3 +78,22 @@
   
     }
  /*.mybanner 단배너 스타일끝 */
+
+ /* footer .bt_sns 시작 */
+ #footer .inner .bt_sns .title {
+  font-size: 16px;
+  color: #000;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+ #footer .inner .bt_top_right .bt_sns a { 
+  margin-top:20px;
+  width:34px; height: 34px;
+  overflow: hidden;
+ }
+#footer .inner .bt_top_right .bt_sns a svg {height:34px;}
+#footer .inner .bt_top_right .bt_sns a svg path {fill:#ababab;-webkit-transition: all 0.3s; -moz-transition: all 0.3s; -ms-transition: all 0.3s; -o-transition: all 0.3s;  transition: all 0.3s;}
+#footer .inner .bt_top_right .bt_sns a:hover svg path {fill:#111;}
+
+
+ /* footer bt-sns 끝 */
