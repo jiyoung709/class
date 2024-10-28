@@ -126,3 +126,34 @@
 #footer .inner .bt_bank{
   display: none;
 }
+#footer .inner .bt_wrap .bt_cscenter,
+#footer .inner .bt_wrap2 .bt_sns{width: 200px;}
+#footer .bt_cscenter .title{
+  display: none;
+}
+#footer .inner .bt_cscenter .bt_txt01{
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  
+}
+#footer .inner .bt_cscenter .bt_txt02{
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  margin-bottom: 0;
+}
+
+/* 클래스명 bt_ 시작하는 요소 */
+#footer .bt_cscenter [class^="bt_"]>strong:first-child{
+  display: none;
+}
+/* padding-right:10 해당하는 요소를 무력화 */
+#footer .inner .pdr10{
+  display: none;
+}
+#footer .inner .bt_wrap2{
+  border-top: 0 none;
+}
+#footer .inner .bt_wrap2 .bt_sns .title{  display: none;}
+#footer .inner .bt_wrap2 .bt_sns a{padding:0}
+#footer .inner .bt_wrap2 .bt_sns a:nth-of-type(1){margin-left:0;}
