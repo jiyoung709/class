@@ -97,3 +97,32 @@
 
 
  /* footer bt-sns 끝 */
+
+ /* 루미너스 footer 디자인 수정 */
+
+ /* //루미너스 footer 디자인 수정 */
+#footer .bt_info .title{
+  display: none;
+}
+/* [속성="값"] */
+/* flex item order를 이용한 순서 변경 */
+#footer .inner .bt_info .bt_info_list{
+  max-width: 550px;
+}
+#footer .bt_info .bt_info_list [data-ez-item="company_name"]{ order:1;}
+#footer .bt_info .bt_info_list [data-ez-item="president_name"]{ order:2;}
+#footer .bt_info .bt_info_list [data-ez-item="address"]{ order:5;}
+#footer .bt_info .bt_info_list [data-ez-item="phone"]{ order:6;}
+#footer .bt_info .bt_info_list [data-ez-item="company_regno"]{ order:3;}
+#footer .bt_info .bt_info_list [data-ez-item="network_regno"]{ order:4;}
+#footer .bt_info .bt_info_list [data-ez-item="cpo_name"]{ order:7;}
+
+#footer .bt_info .bt_info_list [data-ez-item="company_name"] span:first-child{
+  display: none;
+}
+#footer .bt_info .bt_info_list [data-ez-item="address"] span:first-child{
+  display: none;
+}
+#footer .inner .bt_bank{
+  display: none;
+}
