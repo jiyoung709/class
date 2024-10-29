@@ -4,27 +4,82 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>헤더연습</title>
+  <style>
+    *{margin: 0; padding: 0; }
+    ul,ol,li{list-style: none;}
+    body{background-color: #f6f;}
+    #container{
+      background-color: #66f;
+      padding: 2rem;
+      position: relative;
+    }
+    /* 헤더 시작 */
+    #header{
+      position: relative;
+      z-index: 998; /*#container 보다 더 상위 레이어*/
+      width: 100%;
+      padding:22px 0;
+      background-color: rgba(255,255,255,0.5);
+    }
+    #header.fixed{
+      position: fixed;
+      left:0; top:0;
+    }
+    #header .inner{
+      width:92%;
+      max-width: 1680px;/*헤더가 1680 이상으로 되지 말아라*/
+      background-color: #ff6;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+    }
+    #header .inner .toparea{background-color: #ccc;}
+    #header .inner .top_nav_box{
+      background-color: #996;/*삭제*/
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; 
+      /*교차축의 기본값이 normal로 stretch로 정렬된것을 막아주기 위해 
+      align-items: flex-start*/
+    }
+    /* 
+    1 mypage
+        1-1 네비게이션 동일 선상 위치
+        1-2 부모의 오른쪽 아래 위치
+        position:absolute; -> 기준요소 지정
+    2 m메뉴 pc 화면 표시x 1024 보다 작은 화면에서 표시(1025이상 화면 표시x)
+      ->@media (max-width:1024px){}
+    */
+    #header .inner .top_nav_box .top_logo{
+      background-color: #3cc;/*삭제*/
+    }
+    #header .inner .top_nav_box div[data-ez-module="menu-main/1"]{
+      background-color: #cc3;/*삭제*/
+    }
+    #header .inner .top_nav_box .top_mypage{
+      background-color: #c3c;/*삭제*/
+    }
+    #header .inner .top_nav_box .top_sidebar{
+      background-color: #33c;/*삭제*/
+    }
+  
+  </style>
 </head>
 <body>
   <header id="header">
-    <div class="inner"></div>
+    <div class="inner">
     <div class="toparea display_pc_only">toparea</div>
     <div id="top_nav_box" class="top_nav_box">
       <div class="top_logo">로고</div>
-      <!-- div[data-ez-module="menu-main/1/"] -->
-      <div data-ez-module="menu-main/1">
-        <!-- ul>li*4>a>{menu$} -->
-        <!-- <ul>
-          <li><a href="">menu1</a></li>
-          <li><a href="">menu2</a></li>
-          <li><a href="">menu3</a></li>
-          <li><a href="">menu4</a></li>
-        </ul> -->
-      </div>
+      <!-- div[data-ez-module="menu-main/1"] -->
+      <div data-ez-module="menu-main/1">네비게이션</div>
       <div class="top_mypage">mypage</div>
       <div class="top_sidebar">M메뉴</div>
     </div>
-
+  </div>  <!--//.inner  -->
   </header>
+  <div id="container">
+    <div id="content"> 페이지 주 내용</div>
+  </div>
 </body>
 </html>
