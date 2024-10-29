@@ -41,6 +41,7 @@
       position: relative; /*.top_mypage의 기준요소*/
     }
     #header .inner .toparea{background-color: #ccc;}
+    #header.fixed .inner .toparea{display: none;}
     #header .inner .top_nav_box{
       background-color: #996;/*삭제*/
       display: flex;
@@ -59,6 +60,13 @@
     */
     #header .inner .top_nav_box .top_logo{
       background-color: #3cc;/*삭제*/
+    }
+    /* 스크롤되었을 때의 .top_logo를지정 */
+    #header.fixed .inner .top_nav_box .top_logo{
+      position: absolute;
+      left:50%; top:50%;
+      transform: translate(-50%,-50%);
+
     }
     #header .inner .top_nav_box div[data-ez-module="menu-main/1"]{
       background-color: #cc3;/*삭제*/
@@ -97,6 +105,14 @@
       #header .inner .top_nav_box .top_sidebar{
         display: block;/*너비가 1024보다 작은 경우는 햄버거메뉴 표시*/
       }
+
+      /* 1024보다 작은 화면에서 .top_logo가 가운데에 오기 */
+      #header .inner .top_nav_box .top_logo{
+       position: absolute;
+       left:50%; top:50%;
+       transform: translate(-50%, -50%);
+           
+      }
     }
 
     @media (max-width:767px){
@@ -111,7 +127,7 @@
   </style>
 </head>
 <body>
-  <header id="header">
+  <header id="header" class=" fixed">
     <div class="inner">
     <div class="toparea display_pc_only ">toparea</div>
     <div id="top_nav_box" class="top_nav_box">

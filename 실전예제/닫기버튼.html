@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>닫기버튼</title>
+  <style>
+    *{margin: 0; padding: 0;}
+    body{margin:50px;}
+    /* 닫기버튼 */
+    .btnClose{
+      background-color: transparent;/*button 요소 기본 배경색 제거*/
+      border: 0 ;/*button 요소 기본 테투리 제거*/
+      outline: none;/*button 요소 focus가 되었을 때 outline제거*/
+      background-color: #ccc;/* 테스트 후 삭제*/
+      color:transparent;/*button 사이에 입력된 글자 표시x*/
+      text-indent: 150%;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .btnClose .icon.icoClose{
+      background-color: #663; 
+      display: block;
+       position: relative; /*:before :after 기준요소*/
+       width: 15px; height: 15px;
+    }
+    .btnClose .icon.icoClose::before{}
+
+  </style>
+</head>
+<body>
+  <button type="button" class="btnClose">
+    <i class="icon icoClose"></i>  
+    닫기
+  </button>
+</body>
+</html>
