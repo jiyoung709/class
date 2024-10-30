@@ -1,0 +1,19 @@
+#header .inner .top_nav_box .top_category li.on .sub_cate01, 
+#header .inner .top_nav_box .top_category .sub-category {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: auto;
+  margin: 0;
+  width: 100%;
+  min-width: 120px;
+  padding: 220px 20% 50px;
+  background-color: #fff;
+  border: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+
+
+#header .inner .top_nav_box .top_category .sub_cate01 li:hover > a, #header .inner .top_nav_box .top_category .sub-category li:hover > a{
+  background-color: transparent;
+}

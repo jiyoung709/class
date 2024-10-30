@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>z-index 2</title>
+  <style>
+    body{margin: 50px;}
+    .box{
+      width: 400px;
+      height: 300px;
+      padding:30px;
+      box-sizing: border-box;
+    }
+    .box:nth-child(odd){background-color: #ccc;}
+    .box:nth-child(even){background-color: #cc3;}
+    .item{
+       width: 100%;
+       min-height: 100px;
+    }
+    .item1{background-color: #6cc;}
+    .item2{background-color: #c6c;}
+
+    /* z-index */
+    .box1{
+      position:absolute;  top:0;
+      z-index:10;
+    }
+    .box2{
+      position: relative; height: 600px; top:100px;
+      z-index: 50;
+    }
+    .box2 .item1{
+      position: relative;
+      z-index:1000;
+    }
+    .box3{
+      position: relative; 
+      top:-100px;
+      z-index:50;
+    }
+  </style>
+</head>
+<body>
+  <!-- .box.box$*3>.item.item$*2{text$$} -->
+ 
+  <div class="box box1">
+    box1
+    <div class="item item1">text11</div>
+    <div class="item item2">text12</div>
+  </div>
+  <div class="box box2">
+    box2
+    <div class="item item1">text21</div>
+    <div class="item item2">text22</div>
+  </div>
+  <div class="box box3">
+    box3
+    <div class="item item1">text31</div>
+    <div class="item item2">text32</div>
+  </div>
+</body>
+</html>
