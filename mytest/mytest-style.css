@@ -199,3 +199,42 @@
 
 #footer .inner .bt_wrap{  margin-bottom:20px;}
 #footer .inner .bt_wrap2{padding-top:0}
+
+
+
+/* 폴더스타일 2depth 브라우저 전체너비 */
+#header .inner .top_nav_box .top_category li.on .sub_cate01, 
+#header .inner .top_nav_box .top_category .sub-category {
+  /* position: absolute; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  margin: 0;
+  /* width: auto; */
+  width: 100%;
+  min-width: 120px;
+  padding: calc(64px + 220px)  20% 50px;
+  background-color: #ff6;
+  border-bottom: 1px solid #e8e8e8;
+  box-sizing: border-box;
+}
+#header .inner .top_nav_box .top_category .sub_cate01 li:hover > a, 
+#header .inner .top_nav_box .top_category .sub-category li:hover > a {
+  background-color: transparent;
+  color: #000;
+}
+#header .inner .toparea{
+  z-index: 50;
+}
+#header .inner .top_nav_box .top_logo{
+  z-index: 50;
+}
+#header .inner .top_nav_box .top_mypage{
+  z-index: 50;
+}
+#header .inner .top_nav_box .top_category > ul > li > a{
+  position: relative;
+  z-index: 50;
+}
+/* //폴더스타일 2depth 브라우저 전체너비 스타일 끝 */
