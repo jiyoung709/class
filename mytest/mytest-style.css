@@ -203,6 +203,15 @@
 
 
 /* 폴더스타일 2depth 브라우저 전체너비 */
+#header .inner .top_nav_box .top_category{
+  --main_top_banner-height:64px;
+  --header-height:220px;
+  --sub_cate01-padding-left-right:25%; /*%단위로 넣어주시면 좋아요*/
+  --sub_cate01-padding-bottom:50px;
+  --sub_cate01-title-position-gap:0px;
+  --sub_cate01-title-right-gap:30px;
+
+}
 #header .inner .top_nav_box .top_category li.on .sub_cate01, 
 #header .inner .top_nav_box .top_category .sub-category {
   /* position: absolute; */
@@ -214,8 +223,12 @@
   /* width: auto; */
   width: 100%;
   min-width: 120px;
-  padding: calc(64px + 220px)  20% 50px;
-  background-color: #ff6;
+  padding: 
+      calc(var(--main_top_banner-height) + var(--header-height))  
+      var(--sub_cate01-padding-left-right) 
+      var(--sub_cate01-padding-bottom);
+      /*가운데 위치하기 위해서는 20%를 조절하세요*/
+ /* background-color: #ff6;*/
   border-bottom: 1px solid #e8e8e8;
   box-sizing: border-box;
 }
@@ -237,4 +250,49 @@
   position: relative;
   z-index: 50;
 }
+#header .inner .top_nav_box .top_category>ul>li .sub_cate01::before, 
+#header .inner .top_nav_box .top_category>ul>li .sub-category::before {
+  display: block;
+  position: absolute;
+  top:calc(
+    var(--main_top_banner-height) 
+    + var(--header-height) 
+    + var(--sub_cate01-title-position-gap)
+    );
+    /*main_top_banner + header + 여백*/
+    left:var(--sub_cate01-padding-left-right);
+    transform: translateX(calc(-100% - var(--sub_cate01-title-right-gap)));
+  font-size: 2rem;
+
+}
+#header .inner .top_nav_box .top_category>ul>li .sub_cate01::after, 
+#header .inner .top_nav_box .top_category>ul>li .sub-category::after {
+  content: "";
+  position: absolute;
+  top:calc(
+    var(--main_top_banner-height) 
+    + var(--header-height) 
+    );
+  bottom:var(--sub_cate01-padding-bottom);
+  left:var(--sub_cate01-padding-left-right);
+  width: 2px;
+  border-right: 1px solid #ccc;
+}
+#header .inner .top_nav_box .top_category>ul>li:nth-child(2) .sub_cate01::before, 
+#header .inner .top_nav_box .top_category>ul>li:nth-child(2) .sub-category::before {
+  content:"아우터";
+}
+#header .inner .top_nav_box .top_category>ul>li:nth-child(3) .sub_cate01::before, 
+#header .inner .top_nav_box .top_category>ul>li:nth-child(3) .sub-category::before {
+  content:"TOP";
+}
+#header .inner .top_nav_box .top_category>ul>li:nth-child(4) .sub_cate01::before, 
+#header .inner .top_nav_box .top_category>ul>li:nth-child(4) .sub-category::before {
+  content:"원피스";
+}
+#header .inner .top_nav_box .top_category>ul>li:nth-child(5) .sub_cate01::before, 
+#header .inner .top_nav_box .top_category>ul>li:nth-child(5) .sub-category::before {
+  content:"men1";
+}
+
 /* //폴더스타일 2depth 브라우저 전체너비 스타일 끝 */
