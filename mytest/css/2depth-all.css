@@ -1,0 +1,24 @@
+/*모든 2depth 표시 시작*/
+
+#header .inner .top_nav_box .top_category>.is-opened  li.on .sub_cate01, 
+#header .inner .top_nav_box .top_category .sub-category{
+  z-index:50;
+}
+
+
+ #header .d2-bg{
+  --d2-bg-height:200px;
+  display: none;
+  position: absolute;
+  left:0; bottom:calc(0 - var(--d2-bg-height));
+  width:100%;
+  height:var(--d2-bg-height);
+  border-bottom:1px solid #d0ac88;
+  background-color:#fff;
+  z-index: 40;
+ }
+ #header.d2-opened .d2-bg{
+display: block;
+ }
+
+/*//모든 2depth 표시  끝*/
