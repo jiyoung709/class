@@ -202,7 +202,7 @@
 
 
 
-/* 폴더스타일 2depth 브라우저 전체너비 */
+/* 폴더스타일 2depth 브라우저 전체너비 사용하기*/
 #header .inner .top_nav_box .top_category{
   --main_top_banner-height:64px;
   --header-height:220px;
@@ -231,6 +231,11 @@
  /* background-color: #ff6;*/
   border-bottom: 1px solid #e8e8e8;
   box-sizing: border-box;
+}
+#header.fixed .inner .top_nav_box .top_category li.on .sub_cate01, 
+#header.fixed .inner .top_nav_box .top_category .sub-category {
+  top:calc(0 - var(--main_top_banner-height));
+
 }
 #header .inner .top_nav_box .top_category .sub_cate01 li:hover > a, 
 #header .inner .top_nav_box .top_category .sub-category li:hover > a {
@@ -294,5 +299,6 @@
 #header .inner .top_nav_box .top_category>ul>li:nth-child(5) .sub-category::before {
   content:"men1";
 }
+
 
 /* //폴더스타일 2depth 브라우저 전체너비 스타일 끝 */
