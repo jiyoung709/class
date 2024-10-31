@@ -308,15 +308,17 @@
 #header .my_top_search{
  width: 190px;
  height: 40px;
- border-bottom:1px solid #f00;
+ border-bottom:1px solid #333;
+ align-self: center;
 }
 #header .my_top_search form{
   display: block;
   height: 100%;
+ 
 }
 
 #header .my_top_search .xans-layout-searchheader{
-  display: block;
+  display: block !important;
   position: static;
   height: 100%;
   width: 100%;
@@ -332,7 +334,8 @@
 
 }
 #header .my_top_search .xans-layout-searchheader #keyword{
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
+  border:0;
   outline:none;
 }
 #header .my_top_search .xans-layout-searchheader input[type="image"]{
