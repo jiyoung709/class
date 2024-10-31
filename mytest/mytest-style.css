@@ -305,6 +305,9 @@
 
 
 /*헤더검색창 시작*/
+#header .inner .top_nav_box .top_mypage li:nth-child(2) a{
+  padding-right: 0;
+}
 #header .my_top_search{
  width: 190px;
  height: 40px;
@@ -342,5 +345,12 @@
   width:22px; height: 22px;
   position: absolute; right: 0; top:50%;
   transform: translateY(-50%);
+}
+
+
+@media (min-width:1024px){
+  #header .inner .top_nav_box .top_mypage .top_search{
+    display:none;
+  }
 }
 /*//헤더검색창 끝*/
