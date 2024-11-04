@@ -1,0 +1,103 @@
+/* 햄버거 메뉴 */
+.btn_megamenu{
+  display: flex; /*정렬이 편해서*/
+  justify-content: center;
+  height: 80px; /*다른 flex item과 동일 크기로 지정*/
+  width: 40px;
+  margin-right:10px;/*gnb 간격을 벌리기 위해서*/
+}
+.btn_megamenu a{
+  /*display: block;작업 후 변경*/
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.btn_megamenu .icon.icoNav{
+   display: block;
+   width: 20px; height: 2px;
+   color:#000;
+   background: currentColor;/*글자색으로 지정된 색을 사용*/
+   box-shadow: 0 14px 0;/*마지막 선 위치*/
+   position: relative;/*.icon.icoNav::before 기준요소*/
+   margin-top:-14px;
+}
+.btn_megamenu .icon.icoNav::before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; 
+  top:7px; /*중간선 위치*/
+  width: 20px; /*중간선 너비*/
+  height: 2px;/*중간선 높이*/
+  background-color: currentColor;
+}
+
+/* btn_mega_close */
+.btn_megamenu.btn_mega_close a{
+  transform: rotate(45deg);
+  margin:0 auto;
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav{
+  background-color: transparent;
+  box-shadow: none;
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav::before{
+  transform: rotate(90deg);
+}
+.btn_megamenu.btn_mega_close a .icon.icoNav::after{
+  content: "";
+  position: absolute;
+  left: 0; top:7px;
+  width: 20px; height: 2px;
+  background-color: currentColor;
+}
+.dimmed{
+   display: none;
+   z-index:990;  
+   position: fixed;
+   top:0; left:0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(0,0,0,0.7);
+}
+
+/* .btn_megamenu 를 클릭한 상태 */
+
+body{/* 테스용 */
+  background-color: #f00;
+  min-height: 2000px;
+}
+.mega-opened{
+overflow: hidden;
+height: 100%;
+}
+.mega-opened #layoutDimmed{
+  display: block;
+}
+ 
+/* .mega_box */
+.mega_box{
+  display: none;
+}
+.mega-opened .mega_box{
+  display: block;
+}
+
+.mega_box .mega_inner{
+  display: flex;
+  width: 92%; min-width: 1680px;
+  padding: 50px 0;
+  margin:0 auto;
+  background-color: #ff6;
+}
+
+/* .mega_box .mega_inner 의 자식들을 스타일 */
+
+@media (max-width:1024px){
+  .mega_box,
+  .btn_megamenu{
+    display: none;
+  }
+}
+
+/* 메가메뉴 스타일 끝 */
