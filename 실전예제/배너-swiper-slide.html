@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>배너 -swiper -slide </title>
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+  <style>
+    /* reset */
+    *{margin: 0; padding: 0;}
+    .maybanner{margin:50px;}
+    ul,ol,li{list-style: none;}
+    a{text-decoration: none;}
+
+    /*여기서 부터 단 배너 css */
+    .myslide{
+      --banner-gap:20px;/*pc 갭*/
+      --banner-m-h-gap:10px;/*모바일 수평 갭*/
+      --banner-m-v-gap:10px;/*모바일 수직 갭*/
+      --banner-top-margin:50px;
+      --banner-bottom-margin:50px;
+      --banner-top-padding:50px;
+      --banner-bottom-padding:50px;
+      --banner-max-width:1440px;
+      --col1:100%;
+      --col2:50%;
+      --col3:33.333%;
+      --col4:25%;
+      --col5:20%;
+    }
+
+    .myslide{
+      margin-top: var(--banner-top-margin);
+      margin-bottom: var(--banner-bottom-margin);
+      /* background-color: #dd6; */
+    }
+    .myslide__inner{
+      max-width: var(--banner-max-width);
+      margin: 0 auto;
+      padding-top:var(--banner-top-padding);
+      padding-bottom:var(--banner-bottom-padding);
+    }
+    .myslide__list{
+      display: flex;
+      /* gap: var(--banner-gap); */
+      box-sizing: border-box;
+    }
+    .myslide__item{
+      /* flex:1; */
+      box-sizing: border-box;
+      /* background-color: #66f; */
+    }
+    /* .myslide__list.grid1  .myslide__item{width: var(--col1);   }
+    .myslide__list.grid2  .myslide__item{width: var(--col2);   }
+    .myslide__list.grid3  .myslide__item{width: var(--col3);   }
+    .myslide__list.grid4  .myslide__item{width: var(--col4);   }
+    .myslide__list.grid5  .myslide__item{width: var(--col5);   } */
+    .myslide__link{display: block;}
+    .myslide .thumb-box picture,
+    .myslide .thumb-box picture source,
+    .myslide .thumb-box picture img{ 
+      display: block;
+       width: 100%;
+      }
+    .myslide .text-box .text-title{}
+    .myslide .text-box .text-desc{}
+ 
+    @media (max-width:767px){
+      .myslide__list{
+        /* gap: var(--banner-m-h-gap)  var(--banner-m-v-gap); */
+        /* flex-wrap: wrap; */
+      }
+      .myslide__item{
+        /* flex:1 0 auto; */
+      }
+
+      /* .myslide .myslide__item.m-col1{width: calc(var(--col1) - var(--banner-m-v-gap));}
+      .myslide .myslide__item.m-col2{width: calc(var(--col2) - var(--banner-m-v-gap));}
+      .myslide .myslide__item.m-col3{width:calc(var(--col3) - var(--banner-m-v-gap));}
+      .myslide .myslide__item.m-col4{width:calc(var(--col4) - var(--banner-m-v-gap));} */
+  
+    }
+    /*.myslide 단배너 스타일끝 */
+  </style>
+</head>
+<body>
+  <!-- myslide 시작 -->
+  <div class="myslide">
+    <div class="myslide__inner">
+      <!-- <ul class="myslide__list grid3"> -->
+      <ul class="myslide__list">
+
+         <!-- 1번 li -->
+        <!-- <li class="myslide__item m-col2"> -->
+        <li class="myslide__item ">
+          <a href="" class="myslide__link">
+            <div class="thumb-box">
+              <picture>
+                <source 
+                   srcset="/mytest/img/img_768x768.jpg" 
+                   media="(max-width: 720px)">
+               <img src="/mytest/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목1</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+        <!-- 2번째 li -->
+        <!-- <li class="myslide__item m-col2"> -->
+        <li class="myslide__item ">
+          <a href="" class="myslide__link">
+            <div class="thumb-box">
+              <picture>
+                <source 
+                   srcset="/mytest/img/img_768x768.jpg" 
+                   media="(max-width: 720px)">
+               <img src="/mytest/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목2</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+        <!-- 3번째  -->
+        <!-- <li class="myslide__item m-col1"> -->
+        <li class="myslide__item">
+          <a href="" class="myslide__link">
+            <div class="thumb-box">
+              <picture>
+                <source 
+                   srcset="/mytest/img/img_768x768.jpg" 
+                   media="(max-width: 720px)">
+               <img src="/mytest/img/img_1920x810.jpg" 
+                   alt="">
+              </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목3</p>
+              <p class="text-desc">배너 설명  배너 설명</p>
+            </div>
+          </a>
+        </li>
+        <!-- 4번째  li -->
+          <li class="myslide__item">
+            <a href="" class="myslide__link">
+              <div class="thumb-box">
+                <picture>
+                  <source 
+                     srcset="/mytest/img/img_768x768.jpg" 
+                     media="(max-width: 720px)">
+                 <img src="/mytest/img/img_1920x810.jpg" 
+                     alt="">
+                </picture>
+              </div>
+              <div class="text-box">
+                <p class="text-title">배너제목4</p>
+                <p class="text-desc">배너 설명  배너 설명</p>
+              </div>
+            </a>
+          </li>
+        
+
+      </ul>
+    </div>
+  </div>
+  <!-- //myslide -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+</html>
