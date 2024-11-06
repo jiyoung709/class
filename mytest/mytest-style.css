@@ -206,7 +206,7 @@
 #header .inner .top_nav_box .top_category{
   --main_top_banner-height:64px;
   --header-height:220px;
-  --sub_cate01-padding-left-right:25%; /*%단위로 넣어주시면 좋아요*/
+  --sub_cate01-padding-left-right:10%; /*%단위로 넣어주시면 좋아요*/
   --sub_cate01-padding-bottom:50px;
   --sub_cate01-title-position-gap:0px;
   --sub_cate01-title-right-gap:30px;

@@ -63,10 +63,6 @@
 
 /* .btn_megamenu 를 클릭한 상태 */
 
-body{/* 테스용 */
-  background-color: #f00;
-  min-height: 2000px;
-}
 .mega-opened{
 overflow: hidden;
 height: 100%;
