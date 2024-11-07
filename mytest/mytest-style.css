@@ -386,3 +386,64 @@
   border:2px solid  #6f6f6f;
 }
 /* 상세화면 미리보기, 텍스트 번튼 선택 테두리 끝*/
+
+  /*여기서 부터  myslide css */
+  .myslide{
+    --slide-top-margin:50px;
+    --slide-bottom-margin:50px;
+    --slide-max-width:1440px;
+  }
+
+  .myslide{
+    margin-top: var(--slide-top-margin);
+    margin-bottom: var(--slide-bottom-margin);
+  }
+  .myslide__inner{
+    max-width: var(--slide-max-width);
+    margin: 0 auto;
+  }
+  .myslide__list{
+    display: flex;
+    box-sizing: border-box;
+  }
+  .myslide__item{
+    box-sizing: border-box;
+  }
+  .myslide__link{display: block;}
+  .myslide .thumb-box picture,
+  .myslide .thumb-box picture source,
+  .myslide .thumb-box picture img{ 
+    display: block;
+     width: 100%;
+    }
+  .myslide .text-box{
+    position: absolute;
+    left: 100px;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  .myslide .text-box .text-title{}
+  .myslide .text-box .text-desc{}
+
+  @media (max-width:767px){
+    .myslide__list{
+    }
+    .myslide__item{
+    }
+
+  }
+
+      /* swiper ui 변경 */
+      .myslide .swiper-pagination {
+        transform: translateX(-50%);
+        bottom: 50px;
+        left: 50%;
+        }
+        .myslide  .swiper-pagination-bullet{
+          margin:0 3px;
+        }
+        .myslide  .swiper-pagination-bullet-active {
+          background: #000;
+      }
+
+  /*.myslide */

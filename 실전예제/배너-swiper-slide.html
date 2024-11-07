@@ -15,7 +15,7 @@
     ul,ol,li{list-style: none;}
     a{text-decoration: none;}
 
-    /*여기서 부터 단 myslide css */
+    /*여기서 부터  myslide css */
     .myslide{
       /* --slide-gap:20px; */
       /* --slide-m-h-gap:10px;
@@ -66,9 +66,18 @@
       .myslide__item{
       }
 
-  
     }
-    /*.myslide 단배너 스타일끝 */
+
+    /* swiper ui 변경 */
+    .myslide .swiper-pagination {
+    transform: translateX(-50%);
+    bottom: 50px;
+    left: 50%;
+}
+    .myslide  .swiper-pagination-bullet{
+      margin:0 3px;
+    }
+    /*.myslide 배너 스타일끝 */
   </style>
 </head>
 <body>
@@ -172,10 +181,17 @@
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   <script>
-    var swiper = new Swiper(".myslide__inner", {
+    var swiper100 = new Swiper(".myslide__inner", {
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+      pagination: {
+        el: ".swiper-pagination",
+      },
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        hide: true,
       },
     });
   </script>
