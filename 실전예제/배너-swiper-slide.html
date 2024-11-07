@@ -1,85 +1,141 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>배너 -swiper -slide </title>
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <style>
     /* reset */
-    *{margin: 0; padding: 0;}
-    .maybanner{margin:50px;}
-    ul,ol,li{list-style: none;}
-    a{text-decoration: none;}
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .maybanner {
+      margin: 50px;
+    }
+
+    ul,
+    ol,
+    li {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+    }
 
     /*여기서 부터  myslide css */
-    .myslide{
+    .myslide {
       /* --slide-gap:20px; */
       /* --slide-m-h-gap:10px;
       --slide-m-v-gap:10px; */
-      --slide-top-margin:50px;
-      --slide-bottom-margin:50px;
+      --slide-top-margin: 50px;
+      --slide-bottom-margin: 50px;
       /* --slide-top-padding:50px;
       --slide-bottom-padding:50px; */
-      --slide-max-width:1440px;
+      --slide-max-width: 1440px;
     }
 
-    .myslide{
+    .myslide {
       margin-top: var(--slide-top-margin);
       margin-bottom: var(--slide-bottom-margin);
     }
-    .myslide__inner{
+
+    .myslide__inner {
       max-width: var(--slide-max-width);
       margin: 0 auto;
+      position: relative;
+      overflow: hidden;
       /* padding-top:var(--slide-top-padding);
       padding-bottom:var(--slide-bottom-padding); */
     }
-    .myslide__list{
+
+    .myslide__list {
       display: flex;
       box-sizing: border-box;
     }
-    .myslide__item{
+
+    .myslide__item {
       box-sizing: border-box;
     }
-    .myslide__link{display: block;}
+
+    .myslide__link {
+      display: block;
+    }
+
     .myslide .thumb-box picture,
     .myslide .thumb-box picture source,
-    .myslide .thumb-box picture img{ 
+    .myslide .thumb-box picture img {
       display: block;
-       width: 100%;
-      }
-    .myslide .text-box{
+      width: 100%;
+    }
+
+    .myslide .text-box {
       position: absolute;
       left: 100px;
-      top:50%;
+      top: 50%;
       transform: translateY(-50%);
     }
-    .myslide .text-box .text-title{}
-    .myslide .text-box .text-desc{}
- 
-    @media (max-width:767px){
-      .myslide__list{
-      }
-      .myslide__item{
-      }
 
-    }
+    .myslide .text-box .text-title {}
+
+    .myslide .text-box .text-desc {}
+
+
 
     /* swiper ui 변경 */
     .myslide .swiper-pagination {
-    transform: translateX(-50%);
-    bottom: 50px;
-    left: 50%;
-}
-    .myslide  .swiper-pagination-bullet{
-      margin:0 3px;
+      transform: translateX(-50%);
+      bottom: 50px;
+      left: 50%;
     }
+
+    .myslide .swiper-pagination-bullet {
+      margin: 0 3px;
+    }
+
+    .myslide .swiper-pagination-bullet-active {
+      background: #000;
+    }
+
+    .myslide .swiper-button-next,
+    .myslide .swiper-button-prev {
+      /* background-image: url("화살이미지를 URL"); */
+    }
+
+    .myslide .swiper-scrollbar {
+      height: 4px;
+      bottom: 28px;
+      z-index: 990;
+    }
+
+    @media (max-width:720px) {
+
+      .myslide__inner {
+        /* width:92%; */
+        margin: 0 50px;
+        min-width: 340px;
+        overflow: unset;
+      }
+
+      .myslide .swiper-pagination {
+        bottom: 30px;
+      }
+
+      .myslide .swiper-button-next,
+      .myslide .swiper-container-rtl .swiper-button-prev {
+        display: none;
+      }
+
+    }
+
     /*.myslide 배너 스타일끝 */
   </style>
 </head>
+
 <body>
   <!-- myslide 시작 -->
   <div class="myslide">
@@ -87,22 +143,19 @@
       <!-- <ul class="myslide__list grid3"> -->
       <ul class="myslide__list swiper-wrapper">
 
-         <!-- 1번 li -->
+        <!-- 1번 li -->
         <!-- <li class="myslide__item m-col2"> -->
         <li class="myslide__item swiper-slide">
           <a href="" class="myslide__link">
             <div class="thumb-box">
               <picture>
-                <source 
-                   srcset="/mytest/img/img_768x768.jpg" 
-                   media="(max-width: 720px)">
-               <img src="/mytest/img/img_1920x810.jpg" 
-                   alt="">
+                <source srcset="/mytest/img/img_768x768.jpg" media="(max-width: 720px)">
+                <img src="/mytest/img/img_1920x810.jpg" alt="">
               </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목1</p>
-              <p class="text-desc">배너 설명  배너 설명</p>
+              <p class="text-desc">배너 설명 배너 설명</p>
             </div>
           </a>
         </li>
@@ -112,16 +165,13 @@
           <a href="" class="myslide__link">
             <div class="thumb-box">
               <picture>
-                <source 
-                   srcset="/mytest/img/img_768x768.jpg" 
-                   media="(max-width: 720px)">
-               <img src="/mytest/img/img_1920x810.jpg" 
-                   alt="">
+                <source srcset="/mytest/img/img_768x768.jpg" media="(max-width: 720px)">
+                <img src="/mytest/img/img_1920x810.jpg" alt="">
               </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목2</p>
-              <p class="text-desc">배너 설명  배너 설명</p>
+              <p class="text-desc">배너 설명 배너 설명</p>
             </div>
           </a>
         </li>
@@ -131,38 +181,32 @@
           <a href="" class="myslide__link">
             <div class="thumb-box">
               <picture>
-                <source 
-                   srcset="/mytest/img/img_768x768.jpg" 
-                   media="(max-width: 720px)">
-               <img src="/mytest/img/img_1920x810.jpg" 
-                   alt="">
+                <source srcset="/mytest/img/img_768x768.jpg" media="(max-width: 720px)">
+                <img src="/mytest/img/img_1920x810.jpg" alt="">
               </picture>
             </div>
             <div class="text-box">
               <p class="text-title">배너제목3</p>
-              <p class="text-desc">배너 설명  배너 설명</p>
+              <p class="text-desc">배너 설명 배너 설명</p>
             </div>
           </a>
         </li>
         <!-- 4번째  li -->
-          <li class="myslide__item swiper-slide">
-            <a href="" class="myslide__link">
-              <div class="thumb-box">
-                <picture>
-                  <source 
-                     srcset="/mytest/img/img_768x768.jpg" 
-                     media="(max-width: 720px)">
-                 <img src="/mytest/img/img_1920x810.jpg" 
-                     alt="">
-                </picture>
-              </div>
-              <div class="text-box">
-                <p class="text-title">배너제목4</p>
-                <p class="text-desc">배너 설명  배너 설명</p>
-              </div>
-            </a>
-          </li>
-        
+        <li class="myslide__item swiper-slide">
+          <a href="" class="myslide__link">
+            <div class="thumb-box">
+              <picture>
+                <source srcset="/mytest/img/img_768x768.jpg" media="(max-width: 720px)">
+                <img src="/mytest/img/img_1920x810.jpg" alt="">
+              </picture>
+            </div>
+            <div class="text-box">
+              <p class="text-title">배너제목4</p>
+              <p class="text-desc">배너 설명 배너 설명</p>
+            </div>
+          </a>
+        </li>
+
 
       </ul>
 
@@ -196,4 +240,5 @@
     });
   </script>
 </body>
+
 </html>
