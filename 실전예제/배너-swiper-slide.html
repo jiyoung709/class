@@ -15,49 +15,35 @@
     ul,ol,li{list-style: none;}
     a{text-decoration: none;}
 
-    /*여기서 부터 단 배너 css */
+    /*여기서 부터 단 myslide css */
     .myslide{
-      --banner-gap:20px;/*pc 갭*/
-      --banner-m-h-gap:10px;/*모바일 수평 갭*/
-      --banner-m-v-gap:10px;/*모바일 수직 갭*/
-      --banner-top-margin:50px;
-      --banner-bottom-margin:50px;
-      --banner-top-padding:50px;
-      --banner-bottom-padding:50px;
-      --banner-max-width:1440px;
-      --col1:100%;
-      --col2:50%;
-      --col3:33.333%;
-      --col4:25%;
-      --col5:20%;
+      /* --slide-gap:20px; */
+      /* --slide-m-h-gap:10px;
+      --slide-m-v-gap:10px; */
+      --slide-top-margin:50px;
+      --slide-bottom-margin:50px;
+      /* --slide-top-padding:50px;
+      --slide-bottom-padding:50px; */
+      --slide-max-width:1440px;
     }
 
     .myslide{
-      margin-top: var(--banner-top-margin);
-      margin-bottom: var(--banner-bottom-margin);
-      /* background-color: #dd6; */
+      margin-top: var(--slide-top-margin);
+      margin-bottom: var(--slide-bottom-margin);
     }
     .myslide__inner{
-      max-width: var(--banner-max-width);
+      max-width: var(--slide-max-width);
       margin: 0 auto;
-      padding-top:var(--banner-top-padding);
-      padding-bottom:var(--banner-bottom-padding);
+      /* padding-top:var(--slide-top-padding);
+      padding-bottom:var(--slide-bottom-padding); */
     }
     .myslide__list{
       display: flex;
-      /* gap: var(--banner-gap); */
       box-sizing: border-box;
     }
     .myslide__item{
-      /* flex:1; */
       box-sizing: border-box;
-      /* background-color: #66f; */
     }
-    /* .myslide__list.grid1  .myslide__item{width: var(--col1);   }
-    .myslide__list.grid2  .myslide__item{width: var(--col2);   }
-    .myslide__list.grid3  .myslide__item{width: var(--col3);   }
-    .myslide__list.grid4  .myslide__item{width: var(--col4);   }
-    .myslide__list.grid5  .myslide__item{width: var(--col5);   } */
     .myslide__link{display: block;}
     .myslide .thumb-box picture,
     .myslide .thumb-box picture source,
@@ -65,22 +51,21 @@
       display: block;
        width: 100%;
       }
+    .myslide .text-box{
+      position: absolute;
+      left: 100px;
+      top:50%;
+      transform: translateY(-50%);
+    }
     .myslide .text-box .text-title{}
     .myslide .text-box .text-desc{}
  
     @media (max-width:767px){
       .myslide__list{
-        /* gap: var(--banner-m-h-gap)  var(--banner-m-v-gap); */
-        /* flex-wrap: wrap; */
       }
       .myslide__item{
-        /* flex:1 0 auto; */
       }
 
-      /* .myslide .myslide__item.m-col1{width: calc(var(--col1) - var(--banner-m-v-gap));}
-      .myslide .myslide__item.m-col2{width: calc(var(--col2) - var(--banner-m-v-gap));}
-      .myslide .myslide__item.m-col3{width:calc(var(--col3) - var(--banner-m-v-gap));}
-      .myslide .myslide__item.m-col4{width:calc(var(--col4) - var(--banner-m-v-gap));} */
   
     }
     /*.myslide 단배너 스타일끝 */
@@ -185,5 +170,14 @@
   </div>
   <!-- //myslide -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script>
+    var swiper = new Swiper(".myslide__inner", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
 </body>
 </html>
